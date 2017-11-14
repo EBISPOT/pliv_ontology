@@ -1,0 +1,27 @@
+# PURL configuration for http://purl.obolibrary.org/obo/pliv
+
+idspace: PLIV
+base_url: /obo/pliv
+
+products:
+- pliv.owl: https://raw.githubusercontent.com/obophenotype/pliv/master/pliv.owl
+- pliv.obo: https://raw.githubusercontent.com/obophenotype/pliv/master/pliv.obo
+
+term_browser: ontobee
+example_terms:
+- PLIV_0000000
+
+entries:
+
+- prefix: /releases/
+  replacement: https://raw.githubusercontent.com/obophenotype/pliv/v
+
+- prefix: /tracker/
+  replacement: https://github.com/obophenotype/pliv/issues
+
+- prefix: /about/
+  replacement: http://www.ontobee.org/ontology/PLIV?iri=http://purl.obolibrary.org/obo/
+
+## generic fall-through, serve direct from github by default
+- prefix: /
+  replacement: https://raw.githubusercontent.com/obophenotype/pliv/master/
