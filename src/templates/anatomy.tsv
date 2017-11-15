@@ -1,0 +1,183 @@
+ID	Anatomical Structure	Type (is-a)	Part of	Develops from	Starts at stage	Ends at stage	Description	Synonyms	UBERON type	UBERON (non-exact)	Cell type (is-a)	Cell type (non-exact)	Pubmed id	Comments
+ID	A rdfs:label	C %	C  'part of' some %	C  'develops from' some %	C  'existence starts during' some %	C  'existence ends during' some %	A obo:IAO_0000115	A oboInOwl:hasExactSynonym						
+UBERON:0000061	anatomical structure													
+CL:0000000	cell													
+GO:0005575	cellular component		cell											
+GO:0044464	cell part	cellular component												
+CL:0000023	oocyte	cell			oocyte with germinal vesicle stage	unfertilized egg stage	A female germ cell that has entered meiosis				CL:0000023			
+CL:0002090	polar body	cell	oocyte		oocyte with polar bodies stage	oocyte with polar bodies stage					CL:0002090			
+CL:0000019	spermatozoid	cell			spermatozoid stage	spermatozoid stage					CL:0000019			
+PLIV:1000001	spermatozoid head	cell part	spermatozoid		spermatozoid stage	spermatozoid stage	The part of the late spermatid or spermatozoon that contains the nucleus and acrosome.							
+PLIV:1000002	spermatozoid flagellum	cell part	spermatozoid		spermatozoid stage	spermatozoid stage	A microtubule-based flagellum (or cilium) that is part of a sperm, a mature male germ cell that develops from a spermatid							
+PLIV:1000003	intracellular organelle	cellular component												
+PLIV:1000004	germinal vesicle	intracellular organelle	oocyte		oocyte with germinal vesicle stage	oocyte with germinal vesicle stage	The enlarged, fluid filled nucleus of a primary oocyte, the development of which is suspended in prophase I of the first meiotic division between embryohood and sexual maturity					GO:0042585		This structure has been defined from another sea urchin species but is present in P. lividus as well
+PLIV:1000005	cytoplasmic vesicle	intracellular organelle												
+PLIV:1000006	pigment granules	cytoplasmic vesicle			oocyte with germinal vesicle stage	60-cell stage					GO:0048770			
+PLIV:1000007	pigment granules of oocyte	pigment granules	oocyte		oocyte with germinal vesicle stage	oocyte with polar bodies stage								
+PLIV:1000008	pigment granules of embryo	pigment granules	embryo		1-cell stage	60-cell stage								
+PLIV:1000009	equatorial pigment band	anatomical structure		pigment granules	oocyte with germinal vesicle stage	60-cell stage	The subequatorial accumulation of pigment granules (the so-called ‘pigment band’) in eggs or early stage embryos, which constitutes an unambiguous marker of animal-vegetal polarity						Sardet, C. and Chang, P. (1985). A marker of animal-vegetal polarity in the egg of the sea urchin paracentrotus lividus. Exp. Cell Res. 160, 73–82.	
+PLIV:1000010	equatorial pigment band of oocyte	equatorial pigment band	oocyte											
+PLIV:1000011	equatorial pigment band of embryo	equatorial pigment band	embryo											
+PLIV:1000012	fertilization enveloppe	embryonic structure	embryo		1-cell stage	prehatching blastula stage								
+PLIV:1000013	embryo	anatomical structure			1-cell stage	prism stage								
+PLIV:1000014	larvae	anatomical structure												
+PLIV:1000015	adult	anatomical structure												
+PLIV:1000016	cell cortex	cell part			oocyte with germinal vesicle stage	1-cell stage								
+PLIV:1000017	animal cortex of oocyte	cell cortex	oocyte		oocyte with germinal vesicle stage	oocyte with polar bodies stage	The outermost membrane of a cell located at the animal pole and that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins						Croce, J., Range, R., Wu, S.-Y., Miranda, E., Lhomond, G., Peng, J. C., Lepage, T. and McClay, D. R. (2011). Wnt6 activates endoderm in the sea urchin gene regulatory network. Dev. Camb. Engl. 138, 3297–3306.	
+PLIV:1000018	animal cortex of one-cell embryo	cell cortex	one-cell embryo		1-cell stage	1-cell stage								
+PLIV:1000019	vegetal cortex of oocyte	cell cortex	oocyte		oocyte with germinal vesicle stage	oocyte with polar bodies stage								
+PLIV:1000020	vegetal cortex of one-cell embryo	cell cortex	one-cell embryo		1-cell stage	1-cell stage	The outermost membrane of a cell at the vegetal pole and that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins						Croce, J., Range, R., Wu, S.-Y., Miranda, E., Lhomond, G., Peng, J. C., Lepage, T. and McClay, D. R. (2011). Wnt6 activates endoderm in the sea urchin gene regulatory network. Dev. Camb. Engl. 138, 3297–3306.	
+PLIV:1000021	animal hemisphere	anatomical structure	embryo		oocyte with germinal vesicle stage	late swimming blastula stage			UBERON:0012284					
+PLIV:1000022	vegetal hemisphere	anatomical structure	embryo		oocyte with germinal vesicle stage	late swimming blastula stage			UBERON:0012285					
+PLIV:1000023	one-cell embryo	embryo		oocyte	1-cell stage	1-cell stage	A stage at which the organism is a single cell produced by means of sexual reproduction.	fertilized egg	UBERON:0000106					
+PLIV:1000024	eight-cell embryo	embryo			8-cell stage	8-cell stage			UBERON:0019252					
+PLIV:1000025	embryonic structure	anatomical structure	embryo											
+PLIV:1000026	animal quartet	embryonic structure	eight-cell embryo		8-cell stage	8-cell stage	Group of four cells of equal size forming the animal hemisphere of an eight-cell stage embryo							
+PLIV:1000027	vegetal quartet	embryonic structure	eight-cell embryo		8-cell stage	8-cell stage	Group of four cells of equal size forming the vegetal hemisphere of an eight-cell stage embryo							
+PLIV:1000028	blastomere	cell	embryo		1-cell stage	mesenchyme blastula stage	Type of cell produced by cleavage (cell division) of the zygote after fertilization							
+PLIV:1000029	mesomeres	blastomere	animal hemisphere	animal quartet	16-cell stage	16-cell stage								
+PLIV:1000030	macromeres	blastomere	vegetal hemisphere	vegetal quartet	16-cell stage	16-cell stage								
+PLIV:1000031	micromeres	blastomere	vegetal hemisphere	vegetal quartet	16-cell stage	28-cell stage								
+PLIV:1000032	animal tier 1 (an1)	embryonic territory	animal hemisphere	mesomeres	28-cell stage	56-cell stage								
+PLIV:1000033	animal tier 2 (an2)	embryonic territory	animal hemisphere	mesomeres	28-cell stage	56-cell stage								
+PLIV:1000034	vegetal tier 1 (veg1)	embryonic territory	vegetal hemisphere	macromeres descendants	60-cell stage	very early blastula stage								
+PLIV:1000035	vegetal tier 2 (veg2)	embryonic territory	vegetal hemisphere	macromeres descendants	60-cell stage	very early blastula stage								
+PLIV:1000036	germ layer	anatomical structure												
+PLIV:1000037	embryonic tissue	anatomical structure												
+PLIV:1000038	macromeres descendants	blastomere	vegetal hemisphere	macromeres	28-cell stage	32-cell stage								
+PLIV:1000039	large micromeres	blastomere	vegetal hemisphere	micromeres	32-cell stage	late swimming blastula stage								
+PLIV:1000040	small micromeres (SM) cells	blastomere	vegetal hemisphere	micromeres	32-cell stage	early pluteus stage								
+PLIV:1000041	SM cleavage	small micromeres (SM) cells	vegetal hemisphere		32-cell stage	60-cell stage								
+PLIV:1000042	SM primary vegetal plate	small micromeres (SM) cells	primary vegetal plate		very early blastula stage	hatching blastula stage								
+PLIV:1000043	SM secondary vegetal plate	small micromeres (SM) cells	secondary vegetal plate		swimming blastula stage	late swimming blastula stage								
+PLIV:1000044	SM tertiary vegetal plate	small micromeres (SM) cells	tertiary vegetal plate		early mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000045	vegetal plate	embryonic structure	vegetal hemisphere		very early blastula stage	mesenchyme blastula stage								
+PLIV:1000046	primary vegetal plate	embryonic structure	vegetal plate		very early blastula stage	hatching blastula stage								
+PLIV:1000047	secondary vegetal plate	embryonic structure	vegetal plate		swimming blastula stage	late swimming blastula stage								
+PLIV:1000048	tertiary vegetal plate	embryonic structure	vegetal plate		early mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000049	skeletogenic mesoderm	embryonic tissue	vegetal hemisphere	large micromeres	very early blastula stage	early pluteus stage	Structure that has the potential to form a skeletal cell type and produce extracellular matrix (often mineralized) and skeletal tissue (often mineralized).					CL:0007001		
+PLIV:1000050	skeletogenic mesoderm of primary vegetal plate	skeletogenic mesoderm	primary vegetal plate											
+PLIV:1000051	skeletogenic mesoderm of secondary vegetal plate	skeletogenic mesoderm	secondary vegetal plate	large micromeres	very early blastula stage	late swimming blastula stage								
+PLIV:1000052	ingressed skeletogenic mesoderm	skeletogenic mesoderm	blastocoel	skeletogenic mesoderm	early mesenchyme blastula stage	early pluteus stage								
+PLIV:1000053	ventro-lateral clusters of skeletogenic mesoderm cells	skeletogenic mesoderm	blastocoel	ingressed skeletogenic mesoderm	blastopore gastrula stage	prism stage								
+PLIV:1000054	skeleton	anatomical structure			mid gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000055	ventro-lateral primary triradiate skeletal rods	skeleton		ventro-lateral clusters of skeletogenic mesoderm cells	mid gastrula stage	prism stage								
+PLIV:1000056	ventral chain of skeletogenic mesoderm cells	skeletogenic mesoderm	blastocoel	ingressed skeletogenic mesoderm	blastopore gastrula stage	prism stage								
+PLIV:1000057	dorsal chain of skeletogenic mesoderm cells	skeletogenic mesoderm	blastocoel	ingressed skeletogenic mesoderm	blastopore gastrula stage	prism stage								
+PLIV:1000058	lateral arms of skeletogenic mesoderm cells	skeletogenic mesoderm	blastocoel	ingressed skeletogenic mesoderm	early gastrula stage	prism stage								
+PLIV:1000059	pluteus larvae	anatomical structure			early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000060	pluteus arms	anatomical structure	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000061	right antero-lateral arm	pluteus arms	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000062	left antero-lateral arm	pluteus arms	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000063	right post-oral arm	pluteus arms	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000064	left post-oral arm	pluteus arms	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000065	right antero-lateral skeletal rod	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000066	left antero-lateral skeletal rod	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000067	right post-oral skeletal rod	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000068	left post-oral skeletal rod	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000069	ventral transverse skeletal rods	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000070	dorsoventral connecting skeletal rods	skeleton	pluteus larvae		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000071	right postero-dorsal arm	pluteus arms	pluteus larvae		pluteus 6-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000072	left postero-dorsal arm	pluteus arms	pluteus larvae		pluteus 6-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000073	right pre-oral arm	pluteus arms	pluteus larvae		pluteus 8-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000074	left pre-oral arm	pluteus arms	pluteus larvae		pluteus 8-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000075	right postero-dorsal skeletal rod	skeleton	pluteus larvae		pluteus 6-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000076	left postero-dorsal skeletal rod	skeleton	pluteus larvae		pluteus 6-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000077	right pre-oral skeletal rod	skeleton	pluteus larvae		pluteus 8-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000078	left pre-oral skeletal rod	skeleton	pluteus larvae		pluteus 8-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000079	ectoendoderm	germ layer	vegetal hemisphere	vegetal tier 1 (veg1)	60-cell stage	hatching blastula stage								
+PLIV:1000080	ectoderm	germ layer	animal hemisphere		60-cell stage	pre-metamorphosis larvae stage	Primary germ layer that is the outer of the embryo's three germ layers and gives rise to epidermis and neural tissue.		UBERON:0000924					
+PLIV:1000081	embryonic territory	anatomical structure	embryo											
+PLIV:1000082	animal tier 1 ventral (or oral) 	embryonic territory	animal hemisphere	animal tier 1 (an1)	60-cell stage	60-cell stage								
+PLIV:1000083	animal tier 1 dorsal (or aboral)	embryonic territory	animal hemisphere	animal tier 1 (an1)	60-cell stage	60-cell stage								
+PLIV:1000084	animal tier 2 ventral (or oral)	embryonic territory	animal hemisphere	animal tier 2 (an2)	60-cell stage	60-cell stage								
+PLIV:1000085	animal tier 2 dorsal (or aboral)	embryonic territory	animal hemisphere	animal tier 2 (an2)	60-cell stage	60-cell stage								
+PLIV:1000086	apical pole domain (or anterior neural ectoderm)	embryonic territory	animal hemisphere	animal tier 1 (an1)	very early blastula stage	pluteus 8-arms stage								
+PLIV:1000087	oral or ventral ectoderm	embryonic tissue	ectoderm		very early blastula stage	pluteus 8-arms stage								
+PLIV:1000088	aboral or dorsal ectoderm	embryonic tissue	ectoderm		very early blastula stage	pluteus 8-arms stage								
+PLIV:1000089	border ectoderm	embryonic tissue	ectoderm	ectoendoderm	swimming blastula stage	mesenchyme blastula stage							Ref McIntyre	This structure has been defined from another sea urchin species but is present in P. lividus as well
+PLIV:1000090	apical tuft	embryonic territory	apical pole domain (or anterior neural ectoderm)		late swimming blastula stage	prism stage								
+PLIV:1000091	ciliary band ectoderm	embryonic tissue	ectoderm		mesenchyme blastula stage	pluteus 8-arms stage								
+PLIV:1000092	neuroblasts	cell	nervous system		late gastrula stage	pre-metamorphosis larvae stage	A cell that will develop into a neuron							
+PLIV:1000093	apical pole domain neuroblasts	neuroblasts			late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000094	ciliary band neuroblasts	neuroblasts			late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000095	nervous system	anatomical structure			late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000096	neural cells	cell	nervous system		late gastrula stage	pre-metamorphosis larvae stage	A cell that has differentiated into a neuron and is part of the nervous system							
+PLIV:1000097	vegetal ciliary band ectoderm	embryonic tissue	ciliary band ectoderm		late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000098	right lateral ectoderm	embryonic tissue	ectoderm		late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000099	left lateral ectoderm	embryonic tissue	ectoderm		late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000100	serotonergic neurons	neural cells	apical ganglion		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000101	synaptotagmin neurons in ciliary band ectoderm	neural cells	ciliary band ectoderm		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000102	synaptotagmin neurons in apical ganglion	neural cells	apical ganglion		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000103	lateral ciliary band ectoderm	embryonic tissue	ciliary band ectoderm		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000104	vegetal ciliary band ectoderm neuroblast	neuroblasts	vegetal ciliary band ectoderm		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000105	lateral ciliary band ectoderm neuroblast	neuroblasts	lateral ciliary band ectoderm		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000106	ventral ectoderm	embryonic territory	ectoderm		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000107	stomodeum	embryonic structure	ventral ectoderm		prism stage	prism stage								
+PLIV:1000108	lateral ciliary band ectoderm synaptotagmin neurons	neural cells			early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000109	mouth	embryonic structure	ventral ectoderm		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000110	neural structure	anatomical structure			late gastrula stage	pre-metamorphosis larvae stage								
+PLIV:1000111	apical ganglion	neural structure	nervous system		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000112	oral ganglion	neural structure	nervous system		pluteus 4-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000113	lateral ganglion	neural structure	nervous system		pluteus 4-arms stage	pre-metamorphosis larvae stage								
+PLIV:1000114	left postero-dorsal ectoderm	embryonic territory	ectoderm		pluteus 6-arms stage	pluteus 6-arms stage								
+PLIV:1000115	vestibule	embryonic structure	left postero-dorsal ectoderm		pluteus 6-arms stage	pluteus 6-arms stage								
+PLIV:1000116	ciliated epaulettes	embryonic structure			pluteus 8-arms stage	pluteus 8-arms stage								
+PLIV:1000117	endomesoderm	germ layer												
+PLIV:1000118	endomesoderm in vegetal hemisphere	germ layer	vegetal hemisphere	vegetal tier 2 (veg2)	60-cell stage	60-cell stage								
+PLIV:1000119	endomesoderm in primary vegetal plate	germ layer	primary vegetal plate		very early blastula stage	hatching blastula stage								
+PLIV:1000120	endoderm	germ layer		endomesoderm	swimming blastula stage	pluteus 8-arms stage								
+PLIV:1000121	ventral endoderm	embryonic territory	endoderm		late swimming blastula stage	blastopore gastrula stage								
+PLIV:1000122	dorsal endoderm	embryonic territory	endoderm		late swimming blastula stage	blastopore gastrula stage								
+PLIV:1000123	developing digestive tract (or archenteron)	embryonic structure	embryo		blastopore gastrula stage	prism stage								
+PLIV:1000124	blastopore	embryonic structure	developing digestive tract (or archenteron)		blastopore gastrula stage	prism stage								
+PLIV:1000125	blastopore lips	embryonic structure	developing digestive tract (or archenteron)		blastopore gastrula stage	prism stage								
+PLIV:1000126	endoderm derived neuroblasts	neuroblasts	nervous system		late gastrula stage	pluteus 8-arms stage								
+PLIV:1000127	blastocoel	embryonic structure	embryo		very early blastula stage	prism stage								
+PLIV:1000128	endoderm of secondary vegetal plate	endoderm	secondary vegetal plate	endomesoderm	swimming blastula stage	late swimming blastula stage								
+PLIV:1000129	endoderm of tertiary vegetal plate	endoderm	tertiary vegetal plate		early mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000130	archenteron endoderm	endoderm	developing digestive tract (or archenteron)		early gastrula stage	prism stage								
+PLIV:1000131	hindgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000132	ventral hindgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000133	dorsal hindgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000134	midgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000135	ventral midgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000136	dorsal midgut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000137	foregut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000138	ventral foregut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000139	dorsal foregut	embryonic structure	developing digestive tract (or archenteron)		late gastrula stage	prism stage								
+PLIV:1000140	developped digestive tract	embryonic structure	embryo		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000141	esophagus	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000142	cardiac sphincter	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000143	stomach	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000144	pyloric sphincter	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000145	intestine	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000146	anal sphincter	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000147	anus	embryonic structure	developped digestive tract		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000148	non-skeletogenic mesoderm	embryonic tissue		endomesoderm										
+PLIV:1000149	non-skeletogenic mesoderm of secondary vegetal plate	non-skeletogenic mesoderm	secondary vegetal plate		swimming blastula stage	late swimming blastula stage								
+PLIV:1000150	non-skeletogenic mesoderm of tertiary vegetal plate	non-skeletogenic mesoderm	tertiary vegetal plate		early mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000151	non-skeletogenic mesoderm ventral	non-skeletogenic mesoderm	tertiary vegetal plate	non-skeletogenic mesoderm	mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000152	non-skeletogenic mesoderm dorsal	non-skeletogenic mesoderm	tertiary vegetal plate	non-skeletogenic mesoderm	mesenchyme blastula stage	mesenchyme blastula stage								
+PLIV:1000153	pigment cell precursors	non-skeletogenic mesoderm	tertiary vegetal plate	non-skeletogenic mesoderm	mesenchyme blastula stage	late gastrula stage								
+PLIV:1000154	blastocoelar cell precursors	non-skeletogenic mesoderm	tertiary vegetal plate	non-skeletogenic mesoderm	mesenchyme blastula stage	late gastrula stage								
+PLIV:1000155	ventral tip of the developped digestive tract	embryonic structure	developped digestive tract		blastopore gastrula stage	prism stage								
+PLIV:1000156	dorsal tip of the developped digestive tract	embryonic structure	developped digestive tract		blastopore gastrula stage	prism stage								
+PLIV:1000157	roof of the developped digestive tract	embryonic structure	developped digestive tract		blastopore gastrula stage	prism stage								
+PLIV:1000158	immune system cells	anatomical structure												
+PLIV:1000159	immune system 	anatomical structure												
+PLIV:1000160	pigment cells	immune system cells	immune system 		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000161	blastocoelar cells	immune system cells	immune system 		prism stage	pre-metamorphosis larvae stage								
+PLIV:1000162	muscle precursors	embryonic tissue			prism stage	prism stage								
+PLIV:1000163	right coelomic pouch rudiment	embryonic structure	developped digestive tract		early pluteus stage	pluteus 6-arms stage								
+PLIV:1000164	left coelomic pouch rudiment	embryonic structure	developped digestive tract		early pluteus stage	pluteus 6-arms stage								
+PLIV:1000165	globular cells	blastocoelar cells	immune system 		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000166	granular cells	blastocoelar cells	immune system 		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000167	other blastocoelar cell types	blastocoelar cells	immune system 		early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000168	contractile muscles	embryonic tissue		muscle precursors	early pluteus stage	pre-metamorphosis larvae stage								
+PLIV:1000169	primary pore canal	embryonic structure	left coelomic pouch rudiment		pluteus 4-arms stage	pluteus 4-arms stage								
+PLIV:1000170	esophageal domain	embryonic structure	left coelomic pouch rudiment		pluteus 6-arms stage	pluteus 6-arms stage								
+PLIV:1000171	hydrocoel	embryonic structure	left coelomic pouch rudiment		pluteus 6-arms stage	pluteus 6-arms stage								
+PLIV:1000172	stomatocoel	embryonic structure	left coelomic pouch rudiment		pluteus 6-arms stage	pluteus 6-arms stage								
+PLIV:1000173	pedicellaria precursors	embryonic structure	left coelomic pouch rudiment		pluteus 8-arms stage	pluteus 8-arms stage								
+PLIV:1000174	emerging juvenile rudiment	embryonic structure	left coelomic pouch rudiment		pluteus 8-arms stage	pluteus 8-arms stage								
