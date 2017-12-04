@@ -1,5 +1,5 @@
 format-version: 1.2
-data-version: pliv/releases/2017-11-15/pliv.owl
+data-version: pliv/releases/2017-12-04/pliv.owl
 remark: Paracentrotus lividus ontology
 ontology: pliv/pliv
 
@@ -11,8 +11,8 @@ name: cell
 id: CL:0000019
 name: spermatozoid
 is_a: CL:0000000 ! cell
-relationship: RO:0002488 PLIV:0000008 ! existence starts during spermatozoid stage
-relationship: RO:0002492 PLIV:0000008 ! existence ends during spermatozoid stage
+relationship: RO:0002488 PLIV:0000009 ! existence starts during spermatozoid stage
+relationship: RO:0002492 PLIV:0000009 ! existence ends during spermatozoid stage
 
 [Term]
 id: CL:0000023
@@ -20,7 +20,7 @@ name: oocyte
 def: "A female germ cell that has entered meiosis" []
 is_a: CL:0000000 ! cell
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000007 ! existence ends during unfertilized egg stage
+relationship: RO:0002492 PLIV:0000008 ! existence ends during unfertilized egg stage
 
 [Term]
 id: CL:0002090
@@ -70,312 +70,349 @@ relationship: BFO:0000050 PLIV:0000001 ! part of gametogenesis
 
 [Term]
 id: PLIV:0000006
+name: developing spermatozoa stage
+relationship: BFO:0000050 PLIV:0000005 ! part of spermatogenesis period
+
+[Term]
+id: PLIV:0000007
 name: gamete stage
 is_a: UBERON:0000105 ! life cycle stage
 
 [Term]
-id: PLIV:0000007
+id: PLIV:0000008
 name: unfertilized egg stage
 def: "Unfertilized egg arrested in meiotic G1 phase. Average size is 93 mm. Pigment granules are concentrated in a subequatorial band." []
-relationship: BFO:0000050 PLIV:0000006 ! part of gamete stage
+relationship: BFO:0000050 PLIV:0000007 ! part of gamete stage
 relationship: RO:0002087 PLIV:0000002 ! immediately preceded by oogenesis period
 
 [Term]
-id: PLIV:0000008
+id: PLIV:0000009
 name: spermatozoid stage
 def: "A mature male germ cell that develops from a male adult sea urchin animal and has a cilia that propel it toward the oocyte upon spawning" []
-relationship: BFO:0000050 PLIV:0000006 ! part of gamete stage
+relationship: BFO:0000050 PLIV:0000007 ! part of gamete stage
 relationship: RO:0002087 PLIV:0000005 ! immediately preceded by spermatogenesis period
 
 [Term]
-id: PLIV:0000009
+id: PLIV:0000010
 name: embryonic development
 is_a: UBERON:0000105 ! life cycle stage
-relationship: RO:0002087 PLIV:0000006 ! immediately preceded by gamete stage
-
-[Term]
-id: PLIV:0000010
-name: zygote period
-relationship: BFO:0000050 PLIV:0000009 ! part of embryonic development
-relationship: RO:0002087 PLIV:0000006 ! immediately preceded by gamete stage
+relationship: RO:0002087 PLIV:0000007 ! immediately preceded by gamete stage
 
 [Term]
 id: PLIV:0000011
-name: 1-cell stage
-def: "Zygote. Fertilized egg surrounded by the fertilization envelope. Time since fertilization is 0 min." []
-relationship: BFO:0000050 PLIV:0000010 ! part of zygote period
-relationship: RO:0002087 PLIV:0000006 ! immediately preceded by gamete stage
+name: zygote period
+relationship: BFO:0000050 PLIV:0000010 ! part of embryonic development
+relationship: RO:0002087 PLIV:0000007 ! immediately preceded by gamete stage
 
 [Term]
 id: PLIV:0000012
-name: cleavage period
-relationship: BFO:0000050 PLIV:0000009 ! part of embryonic development
-relationship: RO:0002087 PLIV:0000010 ! immediately preceded by zygote period
+name: 1-cell stage
+def: "Zygote. Fertilized egg surrounded by the fertilization envelope. Time since fertilization is 0 min." []
+relationship: BFO:0000050 PLIV:0000011 ! part of zygote period
+relationship: RO:0002087 PLIV:0000007 ! immediately preceded by gamete stage
 
 [Term]
 id: PLIV:0000013
-name: 2-cell stage
-def: "Two-cell stage embryo. The first cleavage plane is meridional and generates two blastomeres of equal size. Time since fertilization at 18°C is 1hr 40min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000011 ! immediately preceded by 1-cell stage
+name: cleavage period
+relationship: BFO:0000050 PLIV:0000010 ! part of embryonic development
+relationship: RO:0002087 PLIV:0000011 ! immediately preceded by zygote period
 
 [Term]
 id: PLIV:0000014
-name: 4-cell stage
-def: "Four-cell stage embryo. The second cleavage plane is also meridional and perpendicular to the first one generating four blastomeres of equal size. Time since fertilization at 18°C is 2hr 30min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000013 ! immediately preceded by 2-cell stage
+name: 2-cell stage
+def: "Two-cell stage embryo. The first cleavage plane is meridional and generates two blastomeres of equal size. Time since fertilization at 18°C is 1hr 40min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000012 ! immediately preceded by 1-cell stage
 
 [Term]
 id: PLIV:0000015
-name: 8-cell stage
-def: "Eight-cell stage embryo. The third cleavage is perpendicular to the first two cleavage planes, and in general equatorial. It separates the animal from vegetal territories from one another. Each territory is composed of four cells of equal volume. Not infrequently, though, the furrow can be subequatorial, so that the 4 animal blastomeres are larger than the vegetal quartet. Time since fertilization at 18°C is 3hr 20min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000014 ! immediately preceded by 4-cell stage
+name: 4-cell stage
+def: "Four-cell stage embryo. The second cleavage plane is also meridional and perpendicular to the first one generating four blastomeres of equal size. Time since fertilization at 18°C is 2hr 30min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000014 ! immediately preceded by 2-cell stage
 
 [Term]
 id: PLIV:0000016
-name: 16-cell stage
-def: "Sixteen-cell stage embryo. All animal and vegetal cells have undergone a fourth cleavage. In the animal hemisphere, this cleavage divided the cells meridionally into eight blastomeres (the mesomeres) of equal volumes. In the vegetal hemisphere, the cells divided unequally through an equatorial cleavage producing four large cells below the equator (the macromeres) and four small cells (the micromeres) at the vegetal pole. Time since fertilization at 18°C is 4hr 10 min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000015 ! immediately preceded by 8-cell stage
+name: 8-cell stage
+def: "Eight-cell stage embryo. The third cleavage is perpendicular to the first two cleavage planes, and in general equatorial. It separates the animal from vegetal territories from one another. Each territory is composed of four cells of equal volume. Not infrequently, though, the furrow can be subequatorial, so that the 4 animal blastomeres are larger than the vegetal quartet. Time since fertilization at 18°C is 3hr 20min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000015 ! immediately preceded by 4-cell stage
 
 [Term]
 id: PLIV:0000017
-name: 28-cell stage
-def: "Twenty eight-cell stage embryo. The eight mesomeres divided equatorially and equally to produce the animal tiers an1 at the animal pole and the animal tier an2 located below an1. The macromeres divided meridionally, forming a ring of eight equal cells located below an2. The micromeres have not yet divided. Time since fertilization at 18°C is 4hr 45min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000016 ! immediately preceded by 16-cell stage
+name: 16-cell stage
+def: "Sixteen-cell stage embryo. All animal and vegetal cells have undergone a fourth cleavage. In the animal hemisphere, this cleavage divided the cells meridionally into eight blastomeres (the mesomeres) of equal volumes. In the vegetal hemisphere, the cells divided unequally through an equatorial cleavage producing four large cells below the equator (the macromeres) and four small cells (the micromeres) at the vegetal pole. Time since fertilization at 18°C is 4hr 10 min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000016 ! immediately preceded by 8-cell stage
 
 [Term]
 id: PLIV:0000018
-name: 32-cell stage
-def: "Thirty two-cell stage embryo. This stage is relatively fleeting. A few minutes before the other cells undergo the 6th cleavage, the micromeres divided again unequally and equatorially to produce four large micromeres and four small micromeres at the vegetal pole. Time since fertilization at 18°C is 5hr." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000017 ! immediately preceded by 28-cell stage
+name: 28-cell stage
+def: "Twenty eight-cell stage embryo. The eight mesomeres divided equatorially and equally to produce the animal tiers an1 at the animal pole and the animal tier an2 located below an1. The macromeres divided meridionally, forming a ring of eight equal cells located below an2. The micromeres have not yet divided. Time since fertilization at 18°C is 4hr 45min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000017 ! immediately preceded by 16-cell stage
 
 [Term]
 id: PLIV:0000019
-name: 56-cell stage
-def: "Fifty sixth-cell stage embryo. During the sixth cleavage, most blastomeres concomitantly undergo an equatorial cleavage, except for the large and small micromeres of which division is somewhat delayed. The embryo is hence composed at that time of 56-cells, including from the animal to the vegetal pole: 16 an1-cells, 16 an2-cells, 8 veg1-cells, 8 veg2-cells, 8 large micromeres and 4 small micromeres. Time since fertilization at 18°C is 5hr 30min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000018 ! immediately preceded by 32-cell stage
+name: 32-cell stage
+def: "Thirty two-cell stage embryo. This stage is relatively fleeting. A few minutes before the other cells undergo the 6th cleavage, the micromeres divided again unequally and equatorially to produce four large micromeres and four small micromeres at the vegetal pole. Time since fertilization at 18°C is 5hr." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000018 ! immediately preceded by 28-cell stage
 
 [Term]
 id: PLIV:0000020
-name: 60-cell stage
-def: "Sixty cell-stage embryo. At the end of 6th cleavage, the large micromereshave achieved an equatorial divisiongenerating a 60 cell-stageembryo. Time since fertilization is5hr 50min." []
-relationship: BFO:0000050 PLIV:0000012 ! part of cleavage period
-relationship: RO:0002087 PLIV:0000019 ! immediately preceded by 56-cell stage
+name: 56-cell stage
+def: "Fifty sixth-cell stage embryo. During the sixth cleavage, most blastomeres concomitantly undergo an equatorial cleavage, except for the large and small micromeres of which division is somewhat delayed. The embryo is hence composed at that time of 56-cells, including from the animal to the vegetal pole: 16 an1-cells, 16 an2-cells, 8 veg1-cells, 8 veg2-cells, 8 large micromeres and 4 small micromeres. Time since fertilization at 18°C is 5hr 30min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000019 ! immediately preceded by 32-cell stage
 
 [Term]
 id: PLIV:0000021
-name: blastula period
-relationship: BFO:0000050 PLIV:0000009 ! part of embryonic development
-relationship: RO:0002087 PLIV:0000012 ! immediately preceded by cleavage period
+name: 60-cell stage
+def: "Sixty cell-stage embryo. At the end of 6th cleavage, the large micromereshave achieved an equatorial divisiongenerating a 60 cell-stageembryo. Time since fertilization is5hr 50min." []
+relationship: BFO:0000050 PLIV:0000013 ! part of cleavage period
+relationship: RO:0002087 PLIV:0000020 ! immediately preceded by 56-cell stage
 
 [Term]
 id: PLIV:0000022
-name: very early blastula stage
-def: "Very early blastula stage embryo. At the end of seventh cleavage, the embryo is formed of about 108 cells, including 8 large and 4 small micromeres presenting a rate of division slower than that of the other cells composing the embryo. The cells start to acquire an apico-basal polarity and form a hollow sphere surrounding a central cavity called the blastocoel. Every cell is in contact with the fluid of the blastocoel on the inside and the hyaline layer on the outside. Time since fertilization at 18°C is 6hr 50min." []
-synonym: "vEB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000020 ! immediately preceded by 60-cell stage
+name: blastula period
+relationship: BFO:0000050 PLIV:0000010 ! part of embryonic development
+relationship: RO:0002087 PLIV:0000013 ! immediately preceded by cleavage period
 
 [Term]
 id: PLIV:0000023
-name: early blastula stage
-def: "Early blastula stage embryo. The cells continue to divide but the synchrony of cell division ends. At the end of 8th cleavage, the embryo is composed of about 220 cells. Cell divisions proceed by waves from the vegetal to the animal pole. There are 16 large micromeres at the end of 8th cleavage. The embryo remains spherical and one cell layer thick. Time since fertilization at 18°C is 7hr 50min." []
-synonym: "EB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000022 ! immediately preceded by very early blastula stage
+name: very early blastula stage
+def: "Very early blastula stage embryo. At the end of seventh cleavage, the embryo is formed of about 108 cells, including 8 large and 4 small micromeres presenting a rate of division slower than that of the other cells composing the embryo. The cells start to acquire an apico-basal polarity and form a hollow sphere surrounding a central cavity called the blastocoel. Every cell is in contact with the fluid of the blastocoel on the inside and the hyaline layer on the outside. Time since fertilization at 18°C is 6hr 50min." []
+synonym: "vEB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000021 ! immediately preceded by 60-cell stage
 
 [Term]
 id: PLIV:0000024
-name: mid-blastula stage
-def: "Mid-blastula stage embryo. Additional cell divisions took place increasing the overall number of cells composing the embryo but without affecting its general size or spherical shape. At that stage, cell divisions are so asynchronous that it is no longer possible to refer to a general 8th, 9th or 10th cleavage. The embryo encompasses between 16 and 32 large micromeres and 8 small micromeres in the vegetal pole region. Time since fertilization at 18°C is 8hr 50min." []
-synonym: "mid-B" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000023 ! immediately preceded by early blastula stage
+name: early blastula stage
+def: "Early blastula stage embryo. The cells continue to divide but the synchrony of cell division ends. At the end of 8th cleavage, the embryo is composed of about 220 cells. Cell divisions proceed by waves from the vegetal to the animal pole. There are 16 large micromeres at the end of 8th cleavage. The embryo remains spherical and one cell layer thick. Time since fertilization at 18°C is 7hr 50min." []
+synonym: "EB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000023 ! immediately preceded by very early blastula stage
 
 [Term]
 id: PLIV:0000025
-name: prehatching blastula stage
-def: "Prehatching blastula stage embryo. The blastula starts becoming motile inside the fertilization envelop. Cilia have developed on the outer surfaces of the cells all around the embryo. The diameter of the blastocoel is about half the size of the embryo. Cells secrete a basal lamina. There are about 32 large micromeres and 8 small micromeres in the vegetal pole region. Time since fertilization at 18°C is 10hr 20min." []
-synonym: "pre-HB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000024 ! immediately preceded by mid-blastula stage
+name: mid-blastula stage
+def: "Mid-blastula stage embryo. Additional cell divisions took place increasing the overall number of cells composing the embryo but without affecting its general size or spherical shape. At that stage, cell divisions are so asynchronous that it is no longer possible to refer to a general 8th, 9th or 10th cleavage. The embryo encompasses between 16 and 32 large micromeres and 8 small micromeres in the vegetal pole region. Time since fertilization at 18°C is 8hr 50min." []
+synonym: "mid-B" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000024 ! immediately preceded by early blastula stage
 
 [Term]
 id: PLIV:0000026
-name: hatching blastula stage
-def: "Hatching blastula stage embryo. The ciliated blastula begins to rotate within the fertilization envelope. The cells from the ectoderm start synthesizing and secreting the hatching enzyme, a metalloprotease that will digest the fertilization envelope and free the embryo. The embryo is composed of about 350 cells. Time since fertilization at 18°C is 11hr." []
-synonym: "HB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000025 ! immediately preceded by prehatching blastula stage
+name: prehatching blastula stage
+def: "Prehatching blastula stage embryo. The blastula starts becoming motile inside the fertilization envelop. Cilia have developed on the outer surfaces of the cells all around the embryo. The diameter of the blastocoel is about half the size of the embryo. Cells secrete a basal lamina. There are about 32 large micromeres and 8 small micromeres in the vegetal pole region. Time since fertilization at 18°C is 10hr 20min." []
+synonym: "pre-HB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000025 ! immediately preceded by mid-blastula stage
 
 [Term]
 id: PLIV:0000027
-name: swimming blastula stage
-def: "Swimming blastula stage embryo. The embryo is spherical and has hatched from the fertilization envelope. It swims. Time since fertilization at 18°C is 12hr." []
-synonym: "SB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000026 ! immediately preceded by hatching blastula stage
+name: hatching blastula stage
+def: "Hatching blastula stage embryo. The ciliated blastula begins to rotate within the fertilization envelope. The cells from the ectoderm start synthesizing and secreting the hatching enzyme, a metalloprotease that will digest the fertilization envelope and free the embryo. The embryo is composed of about 350 cells. Time since fertilization at 18°C is 11hr." []
+synonym: "HB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000026 ! immediately preceded by prehatching blastula stage
 
 [Term]
 id: PLIV:0000028
-name: late swimming blastula stage
-def: "Late swimming blastula stage embryo. The vegetal region of the embryo is thickened and flattened. At the animal pole domain a tuft of long and immotile cilia can be observed, it features the site of the apical pole domain (or apical neuroectodermal domain). The embryo is composed of about 500 cells. Time since fertilization at 18°C is 13hr." []
-synonym: "late-SB" EXACT []
-relationship: BFO:0000050 PLIV:0000021 ! part of blastula period
-relationship: RO:0002087 PLIV:0000027 ! immediately preceded by swimming blastula stage
+name: swimming blastula stage
+def: "Swimming blastula stage embryo. The embryo is spherical and has hatched from the fertilization envelope. It swims. Time since fertilization at 18°C is 12hr." []
+synonym: "SB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000027 ! immediately preceded by hatching blastula stage
 
 [Term]
 id: PLIV:0000029
-name: gastrula period
-relationship: BFO:0000050 PLIV:0000009 ! part of embryonic development
-relationship: RO:0002087 PLIV:0000021 ! immediately preceded by blastula period
+name: late swimming blastula stage
+def: "Late swimming blastula stage embryo. The vegetal region of the embryo is thickened and flattened. At the animal pole domain a tuft of long and immotile cilia can be observed, it features the site of the apical pole domain (or apical neuroectodermal domain). The embryo is composed of about 500 cells. Time since fertilization at 18°C is 13hr." []
+synonym: "late-SB" EXACT []
+relationship: BFO:0000050 PLIV:0000022 ! part of blastula period
+relationship: RO:0002087 PLIV:0000028 ! immediately preceded by swimming blastula stage
 
 [Term]
 id: PLIV:0000030
-name: early mesenchyme blastula stage
-def: "Early mesenchyme blastula stage embryo. The progeny of the large micromeres (about 32 cells) present at the center of the vegetal plate, extend, contract and project filopodia within the blastocoel. These cells progressively loose their apico-basal polarity, round up, dissociate from the epithelial monolayer and ingress into the blastocoel. Once in the blastocoel, these cells are called the skeletogenic mesoderm (or primary mesenchyme cells). At the animal pole the animal neuroectoderm region bearing the long cilia becomes thicker. Time since fertilization at 18°C is 14hr." []
-synonym: "eMB" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000028 ! immediately preceded by late swimming blastula stage
+name: gastrula period
+relationship: BFO:0000050 PLIV:0000010 ! part of embryonic development
+relationship: RO:0002087 PLIV:0000022 ! immediately preceded by blastula period
 
 [Term]
 id: PLIV:0000031
-name: mesenchyme blastula stage
-def: "Mesenchyme blastula stage embryo. All skeletogenic mesoderm (SM) cells have ingressed in the blastocoel leaving behind the vegetal plate reformed composed of the small micromeres and the non-skeletogenic mesoderm cells. Within the blastocoel the SM cells spread over the vegetal plate and migrate through active extension and retraction of filopodia, exploring and sensing the blastocoel wall looking for selective patterning cues. Time since fertilization at 18°C is 15hr." []
-synonym: "MB" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000030 ! immediately preceded by early mesenchyme blastula stage
+name: early mesenchyme blastula stage
+def: "Early mesenchyme blastula stage embryo. The progeny of the large micromeres (about 32 cells) present at the center of the vegetal plate, extend, contract and project filopodia within the blastocoel. These cells progressively loose their apico-basal polarity, round up, dissociate from the epithelial monolayer and ingress into the blastocoel. Once in the blastocoel, these cells are called the skeletogenic mesoderm (or primary mesenchyme cells). At the animal pole the animal neuroectoderm region bearing the long cilia becomes thicker. Time since fertilization at 18°C is 14hr." []
+synonym: "eMB" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000029 ! immediately preceded by late swimming blastula stage
 
 [Term]
 id: PLIV:0000032
-name: blastopore gastrula stage
-def: "Blastopore gastrula stage embryo. The cells that remained within the vegetal plate bound again to one another, and undergo important cell shape changes leading to the bending inward of the vegetal plate and the initiation of the invagination of the archenteron, which in sea urchin is hence launched by the non-skeletogenic mesoderm cells (about 30 cells). The opening with a blind end created at the vegetal pole of the embryo is the blastopore, which will give rise to the future anus. At this stage, the first morphological signs of the second embryonic axis emerge, the oral-aboral axis or the dorso-ventral axis. This apparent bilateral symmetry is observable due to a subpopulation of SM cells that gather in two ventrolateral aggregates forming the SM aggregation clusters, while the remaining SM cells form two chains (the ventral chain and the dorsal chain) connecting the clusters and surrounding the developing archenteron. Time since fertilization at 18°C is around 18hr." []
-synonym: "blasto-G" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000031 ! immediately preceded by mesenchyme blastula stage
+name: mesenchyme blastula stage
+def: "Mesenchyme blastula stage embryo. All skeletogenic mesoderm (SM) cells have ingressed in the blastocoel leaving behind the vegetal plate reformed composed of the small micromeres and the non-skeletogenic mesoderm cells. Within the blastocoel the SM cells spread over the vegetal plate and migrate through active extension and retraction of filopodia, exploring and sensing the blastocoel wall looking for selective patterning cues. Time since fertilization at 18°C is 15hr." []
+synonym: "MB" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000031 ! immediately preceded by early mesenchyme blastula stage
 
 [Term]
 id: PLIV:0000033
-name: early gastrula stage
-def: "Early gastrula stage embryo. The primary invaginated archenteron (about 40 cells) slightly extends within the blastocoel by invagination of additional non-skeletogenic mesoderm and endoderm cells. The SM cells localized within the prospective ventrolateral region of the blastocoel started fusing into syncytial cables, beginning at the level of the ventrolateral clusters. From the SM clusters, some SM cells further start migrating towards the animal pole. They will form the lateral arms of the SM cells syncitium. At this stage, one side of the gastrula flattens and becomes thicker than the rest of the larva. This flattened side is the presumptive ventral side where the mouth will ultimately open. Time since fertilization at 18°C is 20hr" []
-synonym: "eG" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000032 ! immediately preceded by blastopore gastrula stage
+name: blastopore gastrula stage
+def: "Blastopore gastrula stage embryo. The cells that remained within the vegetal plate bound again to one another, and undergo important cell shape changes leading to the bending inward of the vegetal plate and the initiation of the invagination of the archenteron, which in sea urchin is hence launched by the non-skeletogenic mesoderm cells (about 30 cells). The opening with a blind end created at the vegetal pole of the embryo is the blastopore, which will give rise to the future anus. At this stage, the first morphological signs of the second embryonic axis emerge, the oral-aboral axis or the dorso-ventral axis. This apparent bilateral symmetry is observable due to a subpopulation of SM cells that gather in two ventrolateral aggregates forming the SM aggregation clusters, while the remaining SM cells form two chains (the ventral chain and the dorsal chain) connecting the clusters and surrounding the developing archenteron. Time since fertilization at 18°C is around 18hr." []
+synonym: "blasto-G" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000032 ! immediately preceded by mesenchyme blastula stage
 
 [Term]
 id: PLIV:0000034
-name: mid gastrula stage
-def: "Mid gastrula stage embryo. After a brief pause, a new phase of archenteron formation begins during which the archenteron extends dramatically, going from 3-4 to 10 cell tiers and sometimes tripling its initial length. The cellular process by which this elongation takes place (i.e. convergent extension or cell division) remains to be elucidated for P. lividus. At that stage, the SM cells syncitium start calcifying at the level of the ventrolateral clusters to form the primary triradiate skeletal rudiments. Time since fertilization at 18°C is 22hr" []
-synonym: "mid-G" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000033 ! immediately preceded by early gastrula stage
+name: early gastrula stage
+def: "Early gastrula stage embryo. The primary invaginated archenteron (about 40 cells) slightly extends within the blastocoel by invagination of additional non-skeletogenic mesoderm and endoderm cells. The SM cells localized within the prospective ventrolateral region of the blastocoel started fusing into syncytial cables, beginning at the level of the ventrolateral clusters. From the SM clusters, some SM cells further start migrating towards the animal pole. They will form the lateral arms of the SM cells syncitium. At this stage, one side of the gastrula flattens and becomes thicker than the rest of the larva. This flattened side is the presumptive ventral side where the mouth will ultimately open. Time since fertilization at 18°C is 20hr" []
+synonym: "eG" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000033 ! immediately preceded by blastopore gastrula stage
 
 [Term]
 id: PLIV:0000035
-name: late gastrula stage
-def: "Late gastrula stage embryo. The last stage of archenteron elongation is taking place by tension provided by the non-skeletogenic mesenchyme cells present at the tip of the archenteron. The tip of the archenteron attach to the animal pole region through the production of filopodia by some non-skeletogenic mesoderm cells. These filopodia are extended in the direction of the oral ectoderm, attached the wall and then shortened pulling up the archenteron. In parallel, other non-skeletogenic mesoderm cells ingress from the tip of the archenteron. The skeletal rods grow on each side of the basis of the archenteron and along the lateral ectoderm. Time since fertilization at 18°C is 24hr" []
-synonym: "late-G" EXACT []
-relationship: BFO:0000050 PLIV:0000029 ! part of gastrula period
-relationship: RO:0002087 PLIV:0000034 ! immediately preceded by mid gastrula stage
+name: mid gastrula stage
+def: "Mid gastrula stage embryo. After a brief pause, a new phase of archenteron formation begins during which the archenteron extends dramatically, going from 3-4 to 10 cell tiers and sometimes tripling its initial length. The cellular process by which this elongation takes place (i.e. convergent extension or cell division) remains to be elucidated for P. lividus. At that stage, the SM cells syncitium start calcifying at the level of the ventrolateral clusters to form the primary triradiate skeletal rudiments. Time since fertilization at 18°C is 22hr" []
+synonym: "mid-G" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000034 ! immediately preceded by early gastrula stage
 
 [Term]
 id: PLIV:0000036
-name: prism period
-relationship: BFO:0000050 PLIV:0000009 ! part of embryonic development
-relationship: RO:0002087 PLIV:0000029 ! immediately preceded by gastrula period
+name: late gastrula stage
+def: "Late gastrula stage embryo. The last stage of archenteron elongation is taking place by tension provided by the non-skeletogenic mesenchyme cells present at the tip of the archenteron. The tip of the archenteron attach to the animal pole region through the production of filopodia by some non-skeletogenic mesoderm cells. These filopodia are extended in the direction of the oral ectoderm, attached the wall and then shortened pulling up the archenteron. In parallel, other non-skeletogenic mesoderm cells ingress from the tip of the archenteron. The skeletal rods grow on each side of the basis of the archenteron and along the lateral ectoderm. Time since fertilization at 18°C is 24hr" []
+synonym: "late-G" EXACT []
+relationship: BFO:0000050 PLIV:0000030 ! part of gastrula period
+relationship: RO:0002087 PLIV:0000035 ! immediately preceded by mid gastrula stage
 
 [Term]
 id: PLIV:0000037
-name: prism stage
-def: "Prism stage embryo. The embryo takes an overall triangular shape due to the elongation of the skeletal rods and to morphogenesis of the ectoderm along the dorsal-ventral axis. A small depression appears at the center of the ventral ectoderm. This is the presumptive oral field that invaginates due to an autonomous pulsatory activity of the ectoderm cells. It will give rise to the stomodeum. Pigment cells, which represent part of the immune system of the larvae, start getting pigmented and inserted within the aboral ectoderm while other populations of immunocytes such as blastocoelar cells remain in the blastocoel around the gut. At the interface between the ventral and dorsal ectodermal regions, forms the neurogenic territory of the ciliary band, composed of 6 to 8 rows of cuboidal ciliated cells. In contrast, ectodermal cells on the dorsal side become flattened and squamous. The blind end of the archenteron has reached the stomodeal invagination and they will soon fuse to create the mouth. The digestive tract is further starting to become tripartite, segregating from the mouth to the anus: the esophagus, the stomach and the intestine. Within the animal neuroectoderm and the ciliary band differentiating neuronal cells are starting to emerge. Time since fertilization at 18°C is 32hr." []
-synonym: "Pr" EXACT []
-relationship: BFO:0000050 PLIV:0000036 ! part of prism period
-relationship: RO:0002087 PLIV:0000035 ! immediately preceded by late gastrula stage
+name: prism period
+relationship: BFO:0000050 PLIV:0000010 ! part of embryonic development
+relationship: RO:0002087 PLIV:0000030 ! immediately preceded by gastrula period
 
 [Term]
 id: PLIV:0000038
-name: larval development
-is_a: UBERON:0000105 ! life cycle stage
-relationship: RO:0002087 PLIV:0000009 ! immediately preceded by embryonic development
+name: prism stage
+def: "Prism stage embryo. The embryo takes an overall triangular shape due to the elongation of the skeletal rods and to morphogenesis of the ectoderm along the dorsal-ventral axis. A small depression appears at the center of the ventral ectoderm. This is the presumptive oral field that invaginates due to an autonomous pulsatory activity of the ectoderm cells. It will give rise to the stomodeum. Pigment cells, which represent part of the immune system of the larvae, start getting pigmented and inserted within the aboral ectoderm while other populations of immunocytes such as blastocoelar cells remain in the blastocoel around the gut. At the interface between the ventral and dorsal ectodermal regions, forms the neurogenic territory of the ciliary band, composed of 6 to 8 rows of cuboidal ciliated cells. In contrast, ectodermal cells on the dorsal side become flattened and squamous. The blind end of the archenteron has reached the stomodeal invagination and they will soon fuse to create the mouth. The digestive tract is further starting to become tripartite, segregating from the mouth to the anus: the esophagus, the stomach and the intestine. Within the animal neuroectoderm and the ciliary band differentiating neuronal cells are starting to emerge. Time since fertilization at 18°C is 32hr." []
+synonym: "Pr" EXACT []
+relationship: BFO:0000050 PLIV:0000037 ! part of prism period
+relationship: RO:0002087 PLIV:0000036 ! immediately preceded by late gastrula stage
 
 [Term]
 id: PLIV:0000039
-name: pluteus larvae period
-relationship: BFO:0000050 PLIV:0000038 ! part of larval development
-relationship: RO:0002087 PLIV:0000036 ! immediately preceded by prism period
+name: larval development
+is_a: UBERON:0000105 ! life cycle stage
+relationship: RO:0002087 PLIV:0000010 ! immediately preceded by embryonic development
 
 [Term]
 id: PLIV:0000040
-name: early pluteus stage
-def: "Early pluteus stage larva. The mouth has formed and the digestive tract tripartition is now completed with the formation of the cardiac sphincter in between the esophagus and the stomach, the pyloric sphincter in between the stomach and the intestine and the anal sphincter at the level of the anus. In the vicinity of the mouth and the oesophagus, the non skeletogenic mesodermal cells have arranged to form a single unpaired coelomic rudiment. The larvae now possess as well a network of contractile muscles surrounding chiefly the esophagus and allowing swallowing and feeding. The nervous network of the larvae continues to form and extend. The larvae is starting extending four arms, i.e. two antero-lateral arms and two post-oral arms. Time since fertilization is at 18°C about 40hr." []
-synonym: "Plut" EXACT []
-relationship: BFO:0000050 PLIV:0000039 ! part of pluteus larvae period
-relationship: RO:0002087 PLIV:0000037 ! immediately preceded by prism stage
+name: pluteus larvae period
+relationship: BFO:0000050 PLIV:0000039 ! part of larval development
+relationship: RO:0002087 PLIV:0000037 ! immediately preceded by prism period
 
 [Term]
 id: PLIV:0000041
-name: pluteus 4-arms stage
-def: "Pluteus 4-arms stage larvae. The pluteus larvae have extended their antero-lateral and post-oral arms and sleeked their apex. The coelomic rudiment has started to form bilobed sacs on each side of the oesophagus separated by an isthmus. The first signs of left-righ asymmetry become apparent: the size of the left coelomic pouch is slightly larger than the right one. A thin protrusion of mesenchymal cells can be seen extending from the left coelomic pouch to the dorsal ectoderm. This is the primary pore canal. Time since fertilization at 18°C is 48hr." []
-synonym: "Plut4a" EXACT []
-relationship: BFO:0000050 PLIV:0000039 ! part of pluteus larvae period
-relationship: RO:0002087 PLIV:0000040 ! immediately preceded by early pluteus stage
+name: early pluteus stage
+def: "Early pluteus stage larva. The mouth has formed and the digestive tract tripartition is now completed with the formation of the cardiac sphincter in between the esophagus and the stomach, the pyloric sphincter in between the stomach and the intestine and the anal sphincter at the level of the anus. In the vicinity of the mouth and the oesophagus, the non skeletogenic mesodermal cells have arranged to form a single unpaired coelomic rudiment. The larvae now possess as well a network of contractile muscles surrounding chiefly the esophagus and allowing swallowing and feeding. The nervous network of the larvae continues to form and extend. The larvae is starting extending four arms, i.e. two antero-lateral arms and two post-oral arms. Time since fertilization is at 18°C about 40hr." []
+synonym: "Plut" EXACT []
+relationship: BFO:0000050 PLIV:0000040 ! part of pluteus larvae period
+relationship: RO:0002087 PLIV:0000038 ! immediately preceded by prism stage
 
 [Term]
 id: PLIV:0000042
-name: pluteus 6-arms stage
-def: "Pluteus 6-arms stage larvae. The pluteus larvae have extended two postero-dorsal arms and their nervous systems have become more complex. The left coelom has been partitioned into three parts: the upper part remains close to the oesophagus, the middle part becomes the hydrocoel and the third one, close to the stomach, becomes the somatocoel. At the basis of the posterodorsal arm on the left side, a small portion of the ectoderm, the vestibule, thickens and invaginates, comes into contact and associates with the left hydocoel to form the adult rudiment, from which most of the adult tissues will emerge. Time since fertilization at 18°C is about 2 weeks." []
-synonym: "Plut6a" EXACT []
-relationship: BFO:0000050 PLIV:0000039 ! part of pluteus larvae period
-relationship: RO:0002087 PLIV:0000041 ! immediately preceded by pluteus 4-arms stage
+name: pluteus 4-arms stage
+def: "Pluteus 4-arms stage larvae. The pluteus larvae have extended their antero-lateral and post-oral arms and sleeked their apex. The coelomic rudiment has started to form bilobed sacs on each side of the oesophagus separated by an isthmus. The first signs of left-righ asymmetry become apparent: the size of the left coelomic pouch is slightly larger than the right one. A thin protrusion of mesenchymal cells can be seen extending from the left coelomic pouch to the dorsal ectoderm. This is the primary pore canal. Time since fertilization at 18°C is 48hr." []
+synonym: "Plut4a" EXACT []
+relationship: BFO:0000050 PLIV:0000040 ! part of pluteus larvae period
+relationship: RO:0002087 PLIV:0000041 ! immediately preceded by early pluteus stage
 
 [Term]
 id: PLIV:0000043
-name: pluteus 8-arms stage
-def: "Pluteus 8-arms stage larvae. The pluteus have extended twoadditional,pre-oral arms around the mouth. The larva has developed four additional rings of motile cilia around the apex called epaulettes. The left coelomic pouch has undergone substantial changes leading to the formation of a disc displaying a pentaradial symmetry and corresponding to the rudiment of the emerging juvenile. Meanwhile, the right coelomic pouch has led to the formation of a group of precursors of the pedicellaria. Another group of precursors is present near the apex. Time since fertilization at 18°C is about 2 and a half weeks." []
-synonym: "Plut8a" EXACT []
-relationship: BFO:0000050 PLIV:0000039 ! part of pluteus larvae period
-relationship: RO:0002087 PLIV:0000042 ! immediately preceded by pluteus 6-arms stage
+name: pluteus 6-arms stage
+def: "Pluteus 6-arms stage larvae. The pluteus larvae have extended two postero-dorsal arms and their nervous systems have become more complex. The left coelom has been partitioned into three parts: the upper part remains close to the oesophagus, the middle part becomes the hydrocoel and the third one, close to the stomach, becomes the somatocoel. At the basis of the posterodorsal arm on the left side, a small portion of the ectoderm, the vestibule, thickens and invaginates, comes into contact and associates with the left hydocoel to form the adult rudiment, from which most of the adult tissues will emerge. Time since fertilization at 18°C is about 2 weeks." []
+synonym: "Plut6a" EXACT []
+relationship: BFO:0000050 PLIV:0000040 ! part of pluteus larvae period
+relationship: RO:0002087 PLIV:0000042 ! immediately preceded by pluteus 4-arms stage
 
 [Term]
 id: PLIV:0000044
-name: pre-metamorphosis larvae period
-relationship: BFO:0000050 PLIV:0000038 ! part of larval development
-relationship: RO:0002087 PLIV:0000039 ! immediately preceded by pluteus larvae period
+name: pluteus 8-arms stage
+def: "Pluteus 8-arms stage larvae. The pluteus have extended two additional, pre-oral arms around the mouth. The larva has developed four additional rings of motile cilia around the apex called epaulettes. The left coelomic pouch has undergone substantial changes leading to the formation of a disc displaying a pentaradial symmetry and corresponding to the rudiment of the emerging juvenile. Meanwhile, the right coelomic pouch has led to the formation of a group of precursors of the pedicellaria. Another group of precursors is present near the apex. Time since fertilization at 18°C is about 2 and a half weeks." []
+synonym: "Plut8a" EXACT []
+relationship: BFO:0000050 PLIV:0000040 ! part of pluteus larvae period
+relationship: RO:0002087 PLIV:0000043 ! immediately preceded by pluteus 6-arms stage
 
 [Term]
 id: PLIV:0000045
-name: pre-metamorphosis larvae stage
-def: "Pluteus larvae pre-metamorphosis stage. The larvae remains with eight arms. Within the larvae, the rudiment has grown and exhibits spines and tube feet. Time since fertilization at 18°C is about 3 weeks." []
-synonym: "Pre-meta" EXACT []
-relationship: BFO:0000050 PLIV:0000044 ! part of pre-metamorphosis larvae period
-relationship: RO:0002087 PLIV:0000043 ! immediately preceded by pluteus 8-arms stage
+name: pre-metamorphosis larvae period
+relationship: BFO:0000050 PLIV:0000039 ! part of larval development
+relationship: RO:0002087 PLIV:0000040 ! immediately preceded by pluteus larvae period
 
 [Term]
 id: PLIV:0000046
-name: metamorphosis
-def: "Metamorphosis. The larvae undergo a conspicuous and relatively abrupt change in form and structure to give rise in the end of an hatched juvenile. " []
-is_a: UBERON:0000105 ! life cycle stage
-relationship: RO:0002087 PLIV:0000038 ! immediately preceded by larval development
+name: pre-metamorphosis larvae stage
+def: "Pluteus larvae pre-metamorphosis stage. The larvae remains with eight arms. Within the larvae, the rudiment has grown and exhibits spines and tube feet. Time since fertilization at 18°C is about 3 weeks." []
+synonym: "Pre-meta" EXACT []
+relationship: BFO:0000050 PLIV:0000045 ! part of pre-metamorphosis larvae period
+relationship: RO:0002087 PLIV:0000044 ! immediately preceded by pluteus 8-arms stage
 
 [Term]
 id: PLIV:0000047
-name: juvenile
-def: "Juvenile stage. The little metamorphosed juvenile, of about 1mm in diameter,is crawling on the sea bottom. It possesses 5 primary tube feet and a couple of spines. Time since fertilization at 18°C is about 3 and a half weeks." []
+name: metamorphosis
+def: "Metamorphosis. The larvae undergo a conspicuous and relatively abrupt change in form and structure to give rise in the end of an hatched juvenile. " []
 is_a: UBERON:0000105 ! life cycle stage
-relationship: RO:0002087 PLIV:0000046 ! immediately preceded by metamorphosis
+relationship: RO:0002087 PLIV:0000039 ! immediately preceded by larval development
 
 [Term]
 id: PLIV:0000048
-name: adult
-def: "Adult stage. The young adult has grown up to about several centimeters in diameter and is now producing gametes. Time after fertilization is unknown (between several months to one year depending on the rate and type of feeding)." []
+name: metamorphosis period
+relationship: BFO:0000050 PLIV:0000047 ! part of metamorphosis
+relationship: RO:0002087 PLIV:0000045 ! immediately preceded by pre-metamorphosis larvae period
+
+[Term]
+id: PLIV:0000049
+name: early post-metamorpic larva stage
+def: "Early post-metamorpic larva stage. The imaginal disk has begun to unroll and the ectodermal epithelium of the pluteus is beginning to shrink, first recognizable by its withdrawing from the arm rods." []
+relationship: BFO:0000050 PLIV:0000048 ! part of metamorphosis period
+relationship: RO:0002087 PLIV:0000046 ! immediately preceded by pre-metamorphosis larvae stage
+
+[Term]
+id: PLIV:0000050
+name: late post-metamorpic larva stage
+def: "Late post-metamorpic larva stage. The shrinking of the pluteus ectoderm has proceeded. Between each primary tentacle and the mouth 2 definitive podia develop and besides the 2 larval spines in each sector 4 definitive spines develop" []
+relationship: BFO:0000050 PLIV:0000048 ! part of metamorphosis period
+relationship: RO:0002087 PLIV:0000049 ! immediately preceded by early post-metamorpic larva stage
+
+[Term]
+id: PLIV:0000051
+name: juvenile
 is_a: UBERON:0000105 ! life cycle stage
-relationship: RO:0002087 PLIV:0000047 ! immediately preceded by juvenile
+relationship: RO:0002087 PLIV:0000047 ! immediately preceded by metamorphosis
+
+[Term]
+id: PLIV:0000052
+name: juvenile stage
+def: "Juvenile stage. The little metamorphosed juvenile, of about 1mm in diameter,is crawling on the sea bottom. It possesses 5 primary tube feet and a couple of spines. Time since fertilization at 18°C is about 3 and a half weeks." []
+relationship: BFO:0000050 PLIV:0000051 ! part of juvenile
+relationship: RO:0002087 PLIV:0000048 ! immediately preceded by metamorphosis period
+
+[Term]
+id: PLIV:0000053
+name: adult
+is_a: UBERON:0000105 ! life cycle stage
+relationship: RO:0002087 PLIV:0000051 ! immediately preceded by juvenile
+
+[Term]
+id: PLIV:0000054
+name: adult stage
+def: "Adult stage. The young adult has grown up to about several centimeters in diameter and is now producing gametes. Time after fertilization is unknown (between several months to one year depending on the rate and type of feeding)." []
+relationship: BFO:0000050 PLIV:0000053 ! part of adult
+relationship: RO:0002087 PLIV:0000052 ! immediately preceded by juvenile stage
 
 [Term]
 id: PLIV:1000001
@@ -383,8 +420,8 @@ name: spermatozoid head
 def: "The part of the late spermatid or spermatozoon that contains the nucleus and acrosome." []
 is_a: GO:0044464 ! cell part
 relationship: BFO:0000050 CL:0000019 ! part of spermatozoid
-relationship: RO:0002488 PLIV:0000008 ! existence starts during spermatozoid stage
-relationship: RO:0002492 PLIV:0000008 ! existence ends during spermatozoid stage
+relationship: RO:0002488 PLIV:0000009 ! existence starts during spermatozoid stage
+relationship: RO:0002492 PLIV:0000009 ! existence ends during spermatozoid stage
 
 [Term]
 id: PLIV:1000002
@@ -392,8 +429,8 @@ name: spermatozoid flagellum
 def: "A microtubule-based flagellum (or cilium) that is part of a sperm, a mature male germ cell that develops from a spermatid" []
 is_a: GO:0044464 ! cell part
 relationship: BFO:0000050 CL:0000019 ! part of spermatozoid
-relationship: RO:0002488 PLIV:0000008 ! existence starts during spermatozoid stage
-relationship: RO:0002492 PLIV:0000008 ! existence ends during spermatozoid stage
+relationship: RO:0002488 PLIV:0000009 ! existence starts during spermatozoid stage
+relationship: RO:0002492 PLIV:0000009 ! existence ends during spermatozoid stage
 
 [Term]
 id: PLIV:1000003
@@ -419,7 +456,7 @@ id: PLIV:1000006
 name: pigment granules
 is_a: PLIV:1000005 ! cytoplasmic vesicle
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000007
@@ -433,7 +470,7 @@ id: PLIV:1000008
 name: pigment granules of embryo
 is_a: PLIV:1000006 ! pigment granules
 relationship: BFO:0000050 PLIV:1000013 ! part of embryo
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
 
 [Term]
 id: PLIV:1000009
@@ -442,7 +479,7 @@ def: "The subequatorial accumulation of pigment granules (the so-called ‘pigme
 is_a: UBERON:0000061 ! anatomical structure
 relationship: RO:0002202 PLIV:1000006 ! develops from pigment granules
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000010
@@ -460,15 +497,15 @@ relationship: BFO:0000050 PLIV:1000013 ! part of embryo
 id: PLIV:1000012
 name: fertilization enveloppe
 is_a: PLIV:1000025 ! embryonic structure
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
-relationship: RO:0002492 PLIV:0000025 ! existence ends during prehatching blastula stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
+relationship: RO:0002492 PLIV:0000026 ! existence ends during prehatching blastula stage
 
 [Term]
 id: PLIV:1000013
 name: embryo
 is_a: UBERON:0000061 ! anatomical structure
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000014
@@ -485,7 +522,7 @@ id: PLIV:1000016
 name: cell cortex
 is_a: GO:0044464 ! cell part
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000011 ! existence ends during 1-cell stage
+relationship: RO:0002492 PLIV:0000012 ! existence ends during 1-cell stage
 
 [Term]
 id: PLIV:1000017
@@ -500,7 +537,7 @@ id: PLIV:1000018
 name: animal cortex of one-cell embryo
 is_a: PLIV:1000016 ! cell cortex
 relationship: BFO:0000050 PLIV:1000023 ! part of one-cell embryo
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
 
 [Term]
 id: PLIV:1000019
@@ -515,7 +552,7 @@ name: vegetal cortex of one-cell embryo
 def: "The outermost membrane of a cell at the vegetal pole and that separates the cell from its external environment. It consists of a phospholipid bilayer and associated proteins" []
 is_a: PLIV:1000016 ! cell cortex
 relationship: BFO:0000050 PLIV:1000023 ! part of one-cell embryo
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
 
 [Term]
 id: PLIV:1000021
@@ -523,7 +560,7 @@ name: animal hemisphere
 is_a: UBERON:0000061 ! anatomical structure
 relationship: BFO:0000050 PLIV:1000013 ! part of embryo
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000022
@@ -531,7 +568,7 @@ name: vegetal hemisphere
 is_a: UBERON:0000061 ! anatomical structure
 relationship: BFO:0000050 PLIV:1000013 ! part of embryo
 relationship: RO:0002488 PLIV:0000003 ! existence starts during oocyte with germinal vesicle stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000023
@@ -540,14 +577,14 @@ def: "A stage at which the organism is a single cell produced by means of sexual
 synonym: "fertilized egg" EXACT []
 is_a: PLIV:1000013 ! embryo
 relationship: RO:0002202 CL:0000023 ! develops from oocyte
-relationship: RO:0002492 PLIV:0000011 ! existence ends during 1-cell stage
+relationship: RO:0002492 PLIV:0000012 ! existence ends during 1-cell stage
 
 [Term]
 id: PLIV:1000024
 name: eight-cell embryo
 is_a: PLIV:1000013 ! embryo
-relationship: RO:0002488 PLIV:0000015 ! existence starts during 8-cell stage
-relationship: RO:0002492 PLIV:0000015 ! existence ends during 8-cell stage
+relationship: RO:0002488 PLIV:0000016 ! existence starts during 8-cell stage
+relationship: RO:0002492 PLIV:0000016 ! existence ends during 8-cell stage
 
 [Term]
 id: PLIV:1000025
@@ -561,8 +598,8 @@ name: animal quartet
 def: "Group of four cells of equal size forming the animal hemisphere of an eight-cell stage embryo" []
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000024 ! part of eight-cell embryo
-relationship: RO:0002488 PLIV:0000015 ! existence starts during 8-cell stage
-relationship: RO:0002492 PLIV:0000015 ! existence ends during 8-cell stage
+relationship: RO:0002488 PLIV:0000016 ! existence starts during 8-cell stage
+relationship: RO:0002492 PLIV:0000016 ! existence ends during 8-cell stage
 
 [Term]
 id: PLIV:1000027
@@ -570,8 +607,8 @@ name: vegetal quartet
 def: "Group of four cells of equal size forming the vegetal hemisphere of an eight-cell stage embryo" []
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000024 ! part of eight-cell embryo
-relationship: RO:0002488 PLIV:0000015 ! existence starts during 8-cell stage
-relationship: RO:0002492 PLIV:0000015 ! existence ends during 8-cell stage
+relationship: RO:0002488 PLIV:0000016 ! existence starts during 8-cell stage
+relationship: RO:0002492 PLIV:0000016 ! existence ends during 8-cell stage
 
 [Term]
 id: PLIV:1000028
@@ -579,8 +616,8 @@ name: blastomere
 def: "Type of cell produced by cleavage (cell division) of the zygote after fertilization" []
 is_a: CL:0000000 ! cell
 relationship: BFO:0000050 PLIV:1000013 ! part of embryo
-relationship: RO:0002488 PLIV:0000011 ! existence starts during 1-cell stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000012 ! existence starts during 1-cell stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000029
@@ -588,8 +625,8 @@ name: mesomeres
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000026 ! develops from animal quartet
-relationship: RO:0002488 PLIV:0000016 ! existence starts during 16-cell stage
-relationship: RO:0002492 PLIV:0000016 ! existence ends during 16-cell stage
+relationship: RO:0002488 PLIV:0000017 ! existence starts during 16-cell stage
+relationship: RO:0002492 PLIV:0000017 ! existence ends during 16-cell stage
 
 [Term]
 id: PLIV:1000030
@@ -597,8 +634,8 @@ name: macromeres
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000027 ! develops from vegetal quartet
-relationship: RO:0002488 PLIV:0000016 ! existence starts during 16-cell stage
-relationship: RO:0002492 PLIV:0000016 ! existence ends during 16-cell stage
+relationship: RO:0002488 PLIV:0000017 ! existence starts during 16-cell stage
+relationship: RO:0002492 PLIV:0000017 ! existence ends during 16-cell stage
 
 [Term]
 id: PLIV:1000031
@@ -606,8 +643,8 @@ name: micromeres
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000027 ! develops from vegetal quartet
-relationship: RO:0002488 PLIV:0000016 ! existence starts during 16-cell stage
-relationship: RO:0002492 PLIV:0000017 ! existence ends during 28-cell stage
+relationship: RO:0002488 PLIV:0000017 ! existence starts during 16-cell stage
+relationship: RO:0002492 PLIV:0000018 ! existence ends during 28-cell stage
 
 [Term]
 id: PLIV:1000032
@@ -615,8 +652,8 @@ name: animal tier 1 (an1)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000029 ! develops from mesomeres
-relationship: RO:0002488 PLIV:0000017 ! existence starts during 28-cell stage
-relationship: RO:0002492 PLIV:0000019 ! existence ends during 56-cell stage
+relationship: RO:0002488 PLIV:0000018 ! existence starts during 28-cell stage
+relationship: RO:0002492 PLIV:0000020 ! existence ends during 56-cell stage
 
 [Term]
 id: PLIV:1000033
@@ -624,8 +661,8 @@ name: animal tier 2 (an2)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000029 ! develops from mesomeres
-relationship: RO:0002488 PLIV:0000017 ! existence starts during 28-cell stage
-relationship: RO:0002492 PLIV:0000019 ! existence ends during 56-cell stage
+relationship: RO:0002488 PLIV:0000018 ! existence starts during 28-cell stage
+relationship: RO:0002492 PLIV:0000020 ! existence ends during 56-cell stage
 
 [Term]
 id: PLIV:1000034
@@ -633,8 +670,8 @@ name: vegetal tier 1 (veg1)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000038 ! develops from macromeres descendants
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000022 ! existence ends during very early blastula stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000023 ! existence ends during very early blastula stage
 
 [Term]
 id: PLIV:1000035
@@ -642,8 +679,8 @@ name: vegetal tier 2 (veg2)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000038 ! develops from macromeres descendants
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000022 ! existence ends during very early blastula stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000023 ! existence ends during very early blastula stage
 
 [Term]
 id: PLIV:1000036
@@ -661,8 +698,8 @@ name: macromeres descendants
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000030 ! develops from macromeres
-relationship: RO:0002488 PLIV:0000017 ! existence starts during 28-cell stage
-relationship: RO:0002492 PLIV:0000018 ! existence ends during 32-cell stage
+relationship: RO:0002488 PLIV:0000018 ! existence starts during 28-cell stage
+relationship: RO:0002492 PLIV:0000019 ! existence ends during 32-cell stage
 
 [Term]
 id: PLIV:1000039
@@ -670,8 +707,8 @@ name: large micromeres
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000031 ! develops from micromeres
-relationship: RO:0002488 PLIV:0000018 ! existence starts during 32-cell stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002488 PLIV:0000019 ! existence starts during 32-cell stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000040
@@ -679,69 +716,69 @@ name: small micromeres (SM) cells
 is_a: PLIV:1000028 ! blastomere
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000031 ! develops from micromeres
-relationship: RO:0002488 PLIV:0000018 ! existence starts during 32-cell stage
-relationship: RO:0002492 PLIV:0000040 ! existence ends during early pluteus stage
+relationship: RO:0002488 PLIV:0000019 ! existence starts during 32-cell stage
+relationship: RO:0002492 PLIV:0000041 ! existence ends during early pluteus stage
 
 [Term]
 id: PLIV:1000041
 name: SM cleavage
 is_a: PLIV:1000040 ! small micromeres (SM) cells
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000042
 name: SM primary vegetal plate
 is_a: PLIV:1000040 ! small micromeres (SM) cells
 relationship: BFO:0000050 PLIV:1000046 ! part of primary vegetal plate
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000026 ! existence ends during hatching blastula stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000027 ! existence ends during hatching blastula stage
 
 [Term]
 id: PLIV:1000043
 name: SM secondary vegetal plate
 is_a: PLIV:1000040 ! small micromeres (SM) cells
 relationship: BFO:0000050 PLIV:1000047 ! part of secondary vegetal plate
-relationship: RO:0002488 PLIV:0000027 ! existence starts during swimming blastula stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002488 PLIV:0000028 ! existence starts during swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000044
 name: SM tertiary vegetal plate
 is_a: PLIV:1000040 ! small micromeres (SM) cells
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
-relationship: RO:0002488 PLIV:0000030 ! existence starts during early mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000031 ! existence starts during early mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000045
 name: vegetal plate
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000046
 name: primary vegetal plate
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000045 ! part of vegetal plate
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000026 ! existence ends during hatching blastula stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000027 ! existence ends during hatching blastula stage
 
 [Term]
 id: PLIV:1000047
 name: secondary vegetal plate
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000045 ! part of vegetal plate
-relationship: RO:0002488 PLIV:0000027 ! existence starts during swimming blastula stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002488 PLIV:0000028 ! existence starts during swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000048
 name: tertiary vegetal plate
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000045 ! part of vegetal plate
-relationship: RO:0002488 PLIV:0000030 ! existence starts during early mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000031 ! existence starts during early mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000049
@@ -750,8 +787,8 @@ def: "Structure that has the potential to form a skeletal cell type and produce 
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000039 ! develops from large micromeres
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000040 ! existence ends during early pluteus stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000041 ! existence ends during early pluteus stage
 
 [Term]
 id: PLIV:1000050
@@ -764,7 +801,7 @@ id: PLIV:1000051
 name: skeletogenic mesoderm of secondary vegetal plate
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000047 ! part of secondary vegetal plate
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000052
@@ -772,7 +809,7 @@ name: ingressed skeletogenic mesoderm
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000127 ! part of blastocoel
 relationship: RO:0002202 PLIV:1000049 ! develops from skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000030 ! existence starts during early mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000031 ! existence starts during early mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000053
@@ -780,22 +817,22 @@ name: ventro-lateral clusters of skeletogenic mesoderm cells
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000127 ! part of blastocoel
 relationship: RO:0002202 PLIV:1000052 ! develops from ingressed skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000054
 name: skeleton
 is_a: UBERON:0000061 ! anatomical structure
-relationship: RO:0002488 PLIV:0000034 ! existence starts during mid gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000035 ! existence starts during mid gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000055
 name: ventro-lateral primary triradiate skeletal rods
 is_a: PLIV:1000054 ! skeleton
 relationship: RO:0002202 PLIV:1000053 ! develops from ventro-lateral clusters of skeletogenic mesoderm cells
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000056
@@ -803,8 +840,8 @@ name: ventral chain of skeletogenic mesoderm cells
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000127 ! part of blastocoel
 relationship: RO:0002202 PLIV:1000052 ! develops from ingressed skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000057
@@ -812,8 +849,8 @@ name: dorsal chain of skeletogenic mesoderm cells
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000127 ! part of blastocoel
 relationship: RO:0002202 PLIV:1000052 ! develops from ingressed skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000058
@@ -821,23 +858,23 @@ name: lateral arms of skeletogenic mesoderm cells
 is_a: PLIV:1000049 ! skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000127 ! part of blastocoel
 relationship: RO:0002202 PLIV:1000052 ! develops from ingressed skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000033 ! existence starts during early gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000034 ! existence starts during early gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000059
 name: pluteus larvae
 is_a: UBERON:0000061 ! anatomical structure
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000060
 name: pluteus arms
 is_a: UBERON:0000061 ! anatomical structure
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000061
@@ -864,94 +901,94 @@ id: PLIV:1000065
 name: right antero-lateral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000066
 name: left antero-lateral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000067
 name: right post-oral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000068
 name: left post-oral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000069
 name: ventral transverse skeletal rods
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000070
 name: dorsoventral connecting skeletal rods
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000071
 name: right postero-dorsal arm
 is_a: PLIV:1000060 ! pluteus arms
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000072
 name: left postero-dorsal arm
 is_a: PLIV:1000060 ! pluteus arms
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000073
 name: right pre-oral arm
 is_a: PLIV:1000060 ! pluteus arms
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000074
 name: left pre-oral arm
 is_a: PLIV:1000060 ! pluteus arms
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000075
 name: right postero-dorsal skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000076
 name: left postero-dorsal skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000077
 name: right pre-oral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000078
 name: left pre-oral skeletal rod
 is_a: PLIV:1000054 ! skeleton
 relationship: BFO:0000050 PLIV:1000059 ! part of pluteus larvae
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000079
@@ -959,8 +996,8 @@ name: ectoendoderm
 is_a: PLIV:1000036 ! germ layer
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000034 ! develops from vegetal tier 1 (veg1)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000026 ! existence ends during hatching blastula stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000027 ! existence ends during hatching blastula stage
 
 [Term]
 id: PLIV:1000080
@@ -968,8 +1005,8 @@ name: ectoderm
 def: "Primary germ layer that is the outer of the embryo's three germ layers and gives rise to epidermis and neural tissue." []
 is_a: PLIV:1000036 ! germ layer
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000081
@@ -983,8 +1020,8 @@ name: animal tier 1 ventral (or oral)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000032 ! develops from animal tier 1 (an1)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000083
@@ -992,8 +1029,8 @@ name: animal tier 1 dorsal (or aboral)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000032 ! develops from animal tier 1 (an1)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000084
@@ -1001,8 +1038,8 @@ name: animal tier 2 ventral (or oral)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000033 ! develops from animal tier 2 (an2)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000085
@@ -1010,8 +1047,8 @@ name: animal tier 2 dorsal (or aboral)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000033 ! develops from animal tier 2 (an2)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000086
@@ -1019,24 +1056,24 @@ name: apical pole domain (or anterior neural ectoderm)
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000021 ! part of animal hemisphere
 relationship: RO:0002202 PLIV:1000032 ! develops from animal tier 1 (an1)
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000087
 name: oral or ventral ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000088
 name: aboral or dorsal ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000089
@@ -1044,24 +1081,24 @@ name: border ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
 relationship: RO:0002202 PLIV:1000079 ! develops from ectoendoderm
-relationship: RO:0002488 PLIV:0000027 ! existence starts during swimming blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000028 ! existence starts during swimming blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000090
 name: apical tuft
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000086 ! part of apical pole domain (or anterior neural ectoderm)
-relationship: RO:0002488 PLIV:0000028 ! existence starts during late swimming blastula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000029 ! existence starts during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000091
 name: ciliary band ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000031 ! existence starts during mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000032 ! existence starts during mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000092
@@ -1069,8 +1106,8 @@ name: neuroblasts
 def: "A cell that will develop into a neuron" []
 is_a: CL:0000000 ! cell
 relationship: BFO:0000050 PLIV:1000095 ! part of nervous system
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000093
@@ -1086,8 +1123,8 @@ is_a: PLIV:1000092 ! neuroblasts
 id: PLIV:1000095
 name: nervous system
 is_a: UBERON:0000061 ! anatomical structure
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000096
@@ -1095,156 +1132,156 @@ name: neural cells
 def: "A cell that has differentiated into a neuron and is part of the nervous system" []
 is_a: CL:0000000 ! cell
 relationship: BFO:0000050 PLIV:1000095 ! part of nervous system
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000097
 name: vegetal ciliary band ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000091 ! part of ciliary band ectoderm
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000098
 name: right lateral ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000099
 name: left lateral ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000100
 name: serotonergic neurons
 is_a: PLIV:1000096 ! neural cells
 relationship: BFO:0000050 PLIV:1000111 ! part of apical ganglion
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
 
 [Term]
 id: PLIV:1000101
 name: synaptotagmin neurons in ciliary band ectoderm
 is_a: PLIV:1000096 ! neural cells
 relationship: BFO:0000050 PLIV:1000091 ! part of ciliary band ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
 
 [Term]
 id: PLIV:1000102
 name: synaptotagmin neurons in apical ganglion
 is_a: PLIV:1000096 ! neural cells
 relationship: BFO:0000050 PLIV:1000111 ! part of apical ganglion
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
 
 [Term]
 id: PLIV:1000103
 name: lateral ciliary band ectoderm
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: BFO:0000050 PLIV:1000091 ! part of ciliary band ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000104
 name: vegetal ciliary band ectoderm neuroblast
 is_a: PLIV:1000092 ! neuroblasts
 relationship: BFO:0000050 PLIV:1000097 ! part of vegetal ciliary band ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
 
 [Term]
 id: PLIV:1000105
 name: lateral ciliary band ectoderm neuroblast
 is_a: PLIV:1000092 ! neuroblasts
 relationship: BFO:0000050 PLIV:1000103 ! part of lateral ciliary band ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
 
 [Term]
 id: PLIV:1000106
 name: ventral ectoderm
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000107
 name: stomodeum
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000106 ! part of ventral ectoderm
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000108
 name: lateral ciliary band ectoderm synaptotagmin neurons
 is_a: PLIV:1000096 ! neural cells
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000109
 name: mouth
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000106 ! part of ventral ectoderm
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000110
 name: neural structure
 is_a: UBERON:0000061 ! anatomical structure
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000111
 name: apical ganglion
 is_a: PLIV:1000110 ! neural structure
 relationship: BFO:0000050 PLIV:1000095 ! part of nervous system
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000112
 name: oral ganglion
 is_a: PLIV:1000110 ! neural structure
 relationship: BFO:0000050 PLIV:1000095 ! part of nervous system
-relationship: RO:0002488 PLIV:0000041 ! existence starts during pluteus 4-arms stage
+relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 4-arms stage
 
 [Term]
 id: PLIV:1000113
 name: lateral ganglion
 is_a: PLIV:1000110 ! neural structure
 relationship: BFO:0000050 PLIV:1000095 ! part of nervous system
-relationship: RO:0002488 PLIV:0000041 ! existence starts during pluteus 4-arms stage
+relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 4-arms stage
 
 [Term]
 id: PLIV:1000114
 name: left postero-dorsal ectoderm
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000080 ! part of ectoderm
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000115
 name: vestibule
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000114 ! part of left postero-dorsal ectoderm
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000116
 name: ciliated epaulettes
 is_a: PLIV:1000025 ! embryonic structure
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000117
@@ -1257,234 +1294,234 @@ name: endomesoderm in vegetal hemisphere
 is_a: PLIV:1000036 ! germ layer
 relationship: BFO:0000050 PLIV:1000022 ! part of vegetal hemisphere
 relationship: RO:0002202 PLIV:1000035 ! develops from vegetal tier 2 (veg2)
-relationship: RO:0002488 PLIV:0000020 ! existence starts during 60-cell stage
-relationship: RO:0002492 PLIV:0000020 ! existence ends during 60-cell stage
+relationship: RO:0002488 PLIV:0000021 ! existence starts during 60-cell stage
+relationship: RO:0002492 PLIV:0000021 ! existence ends during 60-cell stage
 
 [Term]
 id: PLIV:1000119
 name: endomesoderm in primary vegetal plate
 is_a: PLIV:1000036 ! germ layer
 relationship: BFO:0000050 PLIV:1000046 ! part of primary vegetal plate
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000026 ! existence ends during hatching blastula stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000027 ! existence ends during hatching blastula stage
 
 [Term]
 id: PLIV:1000120
 name: endoderm
 is_a: PLIV:1000036 ! germ layer
 relationship: RO:0002202 PLIV:1000117 ! develops from endomesoderm
-relationship: RO:0002488 PLIV:0000027 ! existence starts during swimming blastula stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000028 ! existence starts during swimming blastula stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000121
 name: ventral endoderm
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000120 ! part of endoderm
-relationship: RO:0002488 PLIV:0000028 ! existence starts during late swimming blastula stage
-relationship: RO:0002492 PLIV:0000032 ! existence ends during blastopore gastrula stage
+relationship: RO:0002488 PLIV:0000029 ! existence starts during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000033 ! existence ends during blastopore gastrula stage
 
 [Term]
 id: PLIV:1000122
 name: dorsal endoderm
 is_a: PLIV:1000081 ! embryonic territory
 relationship: BFO:0000050 PLIV:1000120 ! part of endoderm
-relationship: RO:0002488 PLIV:0000028 ! existence starts during late swimming blastula stage
-relationship: RO:0002492 PLIV:0000032 ! existence ends during blastopore gastrula stage
+relationship: RO:0002488 PLIV:0000029 ! existence starts during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000033 ! existence ends during blastopore gastrula stage
 
 [Term]
 id: PLIV:1000123
 name: developing digestive tract (or archenteron)
 is_a: PLIV:1000025 ! embryonic structure
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000124
 name: blastopore
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000125
 name: blastopore lips
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000126
 name: endoderm derived neuroblasts
 is_a: PLIV:1000092 ! neuroblasts
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000127
 name: blastocoel
 is_a: PLIV:1000025 ! embryonic structure
-relationship: RO:0002488 PLIV:0000022 ! existence starts during very early blastula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000023 ! existence starts during very early blastula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000128
 name: endoderm of secondary vegetal plate
 is_a: PLIV:1000120 ! endoderm
 relationship: BFO:0000050 PLIV:1000047 ! part of secondary vegetal plate
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000129
 name: endoderm of tertiary vegetal plate
 is_a: PLIV:1000120 ! endoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
-relationship: RO:0002488 PLIV:0000030 ! existence starts during early mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000031 ! existence starts during early mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000130
 name: archenteron endoderm
 is_a: PLIV:1000120 ! endoderm
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000033 ! existence starts during early gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000034 ! existence starts during early gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000131
 name: hindgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000132
 name: ventral hindgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000133
 name: dorsal hindgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000134
 name: midgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000135
 name: ventral midgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000136
 name: dorsal midgut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000137
 name: foregut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000138
 name: ventral foregut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000139
 name: dorsal foregut
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000123 ! part of developing digestive tract (or archenteron)
-relationship: RO:0002488 PLIV:0000035 ! existence starts during late gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000036 ! existence starts during late gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000140
 name: developped digestive tract
 is_a: PLIV:1000025 ! embryonic structure
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000141
 name: esophagus
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000142
 name: cardiac sphincter
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000143
 name: stomach
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000144
 name: pyloric sphincter
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000145
 name: intestine
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000146
 name: anal sphincter
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000147
 name: anus
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000148
@@ -1497,16 +1534,16 @@ id: PLIV:1000149
 name: non-skeletogenic mesoderm of secondary vegetal plate
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000047 ! part of secondary vegetal plate
-relationship: RO:0002488 PLIV:0000027 ! existence starts during swimming blastula stage
-relationship: RO:0002492 PLIV:0000028 ! existence ends during late swimming blastula stage
+relationship: RO:0002488 PLIV:0000028 ! existence starts during swimming blastula stage
+relationship: RO:0002492 PLIV:0000029 ! existence ends during late swimming blastula stage
 
 [Term]
 id: PLIV:1000150
 name: non-skeletogenic mesoderm of tertiary vegetal plate
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
-relationship: RO:0002488 PLIV:0000030 ! existence starts during early mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000031 ! existence starts during early mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000151
@@ -1514,8 +1551,8 @@ name: non-skeletogenic mesoderm ventral
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
 relationship: RO:0002202 PLIV:1000148 ! develops from non-skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000031 ! existence starts during mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000032 ! existence starts during mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000152
@@ -1523,8 +1560,8 @@ name: non-skeletogenic mesoderm dorsal
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
 relationship: RO:0002202 PLIV:1000148 ! develops from non-skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000031 ! existence starts during mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000031 ! existence ends during mesenchyme blastula stage
+relationship: RO:0002488 PLIV:0000032 ! existence starts during mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000032 ! existence ends during mesenchyme blastula stage
 
 [Term]
 id: PLIV:1000153
@@ -1532,8 +1569,8 @@ name: pigment cell precursors
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
 relationship: RO:0002202 PLIV:1000148 ! develops from non-skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000031 ! existence starts during mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000035 ! existence ends during late gastrula stage
+relationship: RO:0002488 PLIV:0000032 ! existence starts during mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000036 ! existence ends during late gastrula stage
 
 [Term]
 id: PLIV:1000154
@@ -1541,32 +1578,32 @@ name: blastocoelar cell precursors
 is_a: PLIV:1000148 ! non-skeletogenic mesoderm
 relationship: BFO:0000050 PLIV:1000048 ! part of tertiary vegetal plate
 relationship: RO:0002202 PLIV:1000148 ! develops from non-skeletogenic mesoderm
-relationship: RO:0002488 PLIV:0000031 ! existence starts during mesenchyme blastula stage
-relationship: RO:0002492 PLIV:0000035 ! existence ends during late gastrula stage
+relationship: RO:0002488 PLIV:0000032 ! existence starts during mesenchyme blastula stage
+relationship: RO:0002492 PLIV:0000036 ! existence ends during late gastrula stage
 
 [Term]
 id: PLIV:1000155
 name: ventral tip of the developped digestive tract
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000156
 name: dorsal tip of the developped digestive tract
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000157
 name: roof of the developped digestive tract
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000032 ! existence starts during blastopore gastrula stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000033 ! existence starts during blastopore gastrula stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000158
@@ -1583,113 +1620,113 @@ id: PLIV:1000160
 name: pigment cells
 is_a: PLIV:1000158 ! immune system cells
 relationship: BFO:0000050 PLIV:1000159 ! part of immune system
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000161
 name: blastocoelar cells
 is_a: PLIV:1000158 ! immune system cells
 relationship: BFO:0000050 PLIV:1000159 ! part of immune system
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000162
 name: muscle precursors
 is_a: PLIV:1000037 ! embryonic tissue
-relationship: RO:0002488 PLIV:0000037 ! existence starts during prism stage
-relationship: RO:0002492 PLIV:0000037 ! existence ends during prism stage
+relationship: RO:0002488 PLIV:0000038 ! existence starts during prism stage
+relationship: RO:0002492 PLIV:0000038 ! existence ends during prism stage
 
 [Term]
 id: PLIV:1000163
 name: right coelomic pouch rudiment
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000164
 name: left coelomic pouch rudiment
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000140 ! part of developped digestive tract
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000165
 name: globular cells
 is_a: PLIV:1000161 ! blastocoelar cells
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000166
 name: granular cells
 is_a: PLIV:1000161 ! blastocoelar cells
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000167
 name: other blastocoelar cell types
 is_a: PLIV:1000161 ! blastocoelar cells
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
 
 [Term]
 id: PLIV:1000168
 name: contractile muscles
 is_a: PLIV:1000037 ! embryonic tissue
 relationship: RO:0002202 PLIV:1000162 ! develops from muscle precursors
-relationship: RO:0002488 PLIV:0000040 ! existence starts during early pluteus stage
-relationship: RO:0002492 PLIV:0000045 ! existence ends during pre-metamorphosis larvae stage
+relationship: RO:0002488 PLIV:0000041 ! existence starts during early pluteus stage
+relationship: RO:0002492 PLIV:0000046 ! existence ends during pre-metamorphosis larvae stage
 
 [Term]
 id: PLIV:1000169
 name: primary pore canal
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000041 ! existence starts during pluteus 4-arms stage
-relationship: RO:0002492 PLIV:0000041 ! existence ends during pluteus 4-arms stage
+relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 4-arms stage
+relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 4-arms stage
 
 [Term]
 id: PLIV:1000170
 name: esophageal domain
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000171
 name: hydrocoel
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000172
 name: stomatocoel
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000042 ! existence starts during pluteus 6-arms stage
-relationship: RO:0002492 PLIV:0000042 ! existence ends during pluteus 6-arms stage
+relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 6-arms stage
+relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 6-arms stage
 
 [Term]
 id: PLIV:1000173
 name: pedicellaria precursors
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: PLIV:1000174
 name: emerging juvenile rudiment
 is_a: PLIV:1000025 ! embryonic structure
 relationship: BFO:0000050 PLIV:1000164 ! part of left coelomic pouch rudiment
-relationship: RO:0002488 PLIV:0000043 ! existence starts during pluteus 8-arms stage
-relationship: RO:0002492 PLIV:0000043 ! existence ends during pluteus 8-arms stage
+relationship: RO:0002488 PLIV:0000044 ! existence starts during pluteus 8-arms stage
+relationship: RO:0002492 PLIV:0000044 ! existence ends during pluteus 8-arms stage
 
 [Term]
 id: UBERON:0000061
