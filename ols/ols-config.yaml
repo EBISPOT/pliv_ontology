@@ -1,0 +1,16 @@
+
+"@context":
+
+ontologies:
+
+## PLIV
+
+  - id: pliv
+    preferredPrefix: PLIV
+    title: Paracentrotus lividus ontology
+    uri: http://purl.obolibrary.org/obo/pliv.owl
+    base_uri:
+      - http://purl.obolibrary.org/obo/PLIV_
+    reasoner: EL
+    oboSlims: false
+    ontology_purl : file:///opt/ols/ontologies/pliv.owl
