@@ -77,7 +77,7 @@ mirror/%.owl: $(SRC)
 # ----------------------------------------
 # copy from staging area (this directory) to top-level
 release: $(ONT).owl $(ONT).obo
-	cp $^ $(RELEASEDIR) && cp imports/* $(RELEASEDIR)/imports
+	cp $^ $(RELEASEDIR)
 
 # ----------------------------------------
 # Sparql queries: Q/C
