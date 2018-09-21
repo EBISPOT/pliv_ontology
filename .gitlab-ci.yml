@@ -18,10 +18,7 @@ ontology-build:
     - docker
   script: 
   - "apk add --update make"
-  - "apk add --update curl"
-  - "cd src/ontology ; ./get_mirrors.sh"
-  - "make all_imports"
-  - "make"
+  - "cd src/ontology; make"
   - "make prepare_release"
   artifacts:
     paths:
