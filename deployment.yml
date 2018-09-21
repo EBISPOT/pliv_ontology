@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: "pliv-ols"
-        image: "eu.gcr.io/pliv-ols/pliv-ols:latest"
+        image: "eu.gcr.io/efo3-ols/pliv-ols:latest"
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
