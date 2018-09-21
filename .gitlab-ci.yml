@@ -1,0 +1,53 @@
+image: docker:latest
+
+variables:
+  DOCKER_DRIVER: overlay
+  
+services:
+  - docker:dind
+  
+stages:
+  - build
+  - package
+  - deploy
+
+ontology-build:
+  image: openjdk:8-jdk-alpine
+  stage: build
+  tags:
+    - docker
+  script: 
+  - "apk add --update make"
+  - "apk add --update curl"
+  - "cd src/ontology ; ./get_mirrors.sh"
+  - "make all_imports"
+  - "make"
+  - "make prepare_release"
+  artifacts:
+    paths:
+      - pliv.owl
+
+docker-build:
+  stage: package
+  dependencies: 
+    - ontology-build
+  tags:
+    - docker-socket
+  script:
+  - docker build -t pliv-ols .
+  - docker tag pliv-ols eu.gcr.io/$GOOGLE_PROJECT_KEY/pliv-ols
+  - echo "$GOOGLE_KEY" > key.json
+  - docker login -u _json_key --password-stdin https://eu.gcr.io < key.json
+  - docker push eu.gcr.io/$GOOGLE_PROJECT_KEY/pliv-ols:latest
+
+k8s-deploy:
+  image: google/cloud-sdk
+  stage: deploy
+  script:
+  - echo "$GOOGLE_KEY" > key.json
+  - gcloud auth activate-service-account --key-file key.json
+  - gcloud config set compute/zone europe-west1
+  - gcloud config set project pliv-ols
+#   - gcloud config set container/use_client_certificate True
+  - gcloud container clusters get-credentials pliv-ols
+  - kubectl apply -f deployment.yml
