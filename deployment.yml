@@ -1,0 +1,24 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  name: "pliv-ols"
+  namespace: "default"
+  labels:
+    app: "pliv-ols"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "pliv-ols"
+  template:
+    metadata:
+      labels:
+        app: "pliv-ols"
+    spec:
+      containers:
+      - name: "pliv-ols"
+        image: "eu.gcr.io/efo3-ols/pliv-ols:latest"
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
