@@ -39,10 +39,10 @@ $(ONT).obo: $(ONT).owl
 # ----------------------------------------
 
 anatomy-generated.owl:../templates/anatomy.tsv development-generated.owl
-	$(ROBOT) merge --input ../../imports/upper.owl --input $(SRC) --input development-generated.owl template --merge-before --prefix "PLIV: http://purl.obolibrary.org/obo/PLIV_" --template ../templates/anatomy.tsv --output $@
+	$(ROBOT) merge --input ../../imports/upper.owl --input $(SRC) --input development-generated.owl template --merge-before --prefix "URCH: http://purl.obolibrary.org/obo/URCH_" --template ../templates/anatomy.tsv --output $@
 
 development-generated.owl: ../templates/development.tsv
-	$(ROBOT) merge --input ../../imports/upper.owl --input $(SRC) template --merge-before --prefix "PLIV: http://purl.obolibrary.org/obo/PLIV_" --template ../templates/development.tsv --output $@
+	$(ROBOT) merge --input ../../imports/upper.owl --input $(SRC) template --merge-before --prefix "URCH: http://purl.obolibrary.org/obo/URCH_" --template ../templates/development.tsv --output $@
 
 
 # ----------------------------------------
