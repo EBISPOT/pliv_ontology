@@ -38,7 +38,7 @@ $(ONT).obo: $(ONT).owl
 # Templates
 # ----------------------------------------
 
-anatomy-generated.owl:../templates/anatomy.tsv development-generated.owl
+anatomy-generated.owl:../templates/anatomy.tsv development-generated.owl ../../imports/upper.owl
 	$(ROBOT) merge --input ../../imports/upper.owl --input $(SRC) --input development-generated.owl template --merge-before --prefix "URCH: http://purl.obolibrary.org/obo/URCH_" --template ../templates/anatomy.tsv --output $@
 
 development-generated.owl: ../templates/development.tsv
