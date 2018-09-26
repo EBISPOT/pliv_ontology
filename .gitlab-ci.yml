@@ -48,5 +48,5 @@ k8s-deploy:
   - gcloud config set compute/zone europe-west1-b
   - gcloud config set project $GOOGLE_PROJECT_KEY
   - gcloud container clusters get-credentials pliv-ols
-  - kubectl delete deployment pliv-ols
+  - kubectl delete --ignore-not-found=true deployment pliv-ols
   - kubectl apply -f deployment.yml
