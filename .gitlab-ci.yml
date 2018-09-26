@@ -40,6 +40,8 @@ docker-build:
 k8s-deploy:
   image: google/cloud-sdk
   stage: deploy
+  tag:
+    - docker-socket
   script:
   - echo "$GOOGLE_KEY" > key.json
   - gcloud auth activate-service-account --key-file key.json
