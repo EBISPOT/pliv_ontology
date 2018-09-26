@@ -1,16 +1,15 @@
-
 "@context":
 
 ontologies:
 
-## PLIV
+## URCH
 
-  - id: pliv
-    preferredPrefix: PLIV
-    title: Paracentrotus lividus ontology
-    uri: http://purl.obolibrary.org/obo/pliv.owl
+  - id: urch
+    preferredPrefix: URCH
+    title: Sea Urchin Ontology
+    uri: http://purl.obolibrary.org/obo/urch.owl
     base_uri:
-      - http://purl.obolibrary.org/obo/PLIV_
+      - http://purl.obolibrary.org/obo/URCH_
     reasoner: EL
     oboSlims: false
     ontology_purl : file:///opt/ols/ontologies/pliv.owl
