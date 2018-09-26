@@ -4,7 +4,7 @@
 # these can be overwritten on the command line
 
 OBO=http://purl.obolibrary.org/obo
-ONT=pliv
+ONT=urch
 BASE=$(OBO)/$(ONT)
 SRC=$(ONT)-edit.owl
 RELEASEDIR=../..

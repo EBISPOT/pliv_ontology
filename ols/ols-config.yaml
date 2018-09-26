@@ -12,4 +12,4 @@ ontologies:
       - http://purl.obolibrary.org/obo/URCH_
     reasoner: EL
     oboSlims: false
-    ontology_purl : file:///opt/ols/ontologies/pliv.owl
+    ontology_purl : file:///opt/ols/ontologies/urch.owl
